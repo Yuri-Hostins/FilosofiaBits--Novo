@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Tags Metas -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Links -->
+
+    <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.png">
+    <link rel="stylesheet" href="../css/base.css">
+
+    <!-- Script -->
+
+    <script src="../js/loader.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/alternar.js" defer></script>
+    <script src="../js/voltaTop.js" defer></script>
+
+    <!-- Título -->
+    <title>Mitos Gregos | FilosofiaBits</title>
+  </head>
+
+  <body>
+
+    <!-- início do preloader -->
+		<section id="preloader">
+      <div class="inner">
+        <div class="loader"></div>
+        <div class="container--loader">
+          <div class="container--animacao">
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+					</div>
+					<svg>
+						<filter id="gooey">
+							<feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+							<feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -10 " />
+						</filter>
+					</svg>
+          <div>
+            <h4 class="texto-loader">O site está carregando. Por favor, aguarde um momento.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+		<!-- fim do preloader	 -->
+
+    <!-- início do "back-to-top" -->
+    <div class="box-botao" id="btn-top">
+      <span class="text-botao">Voltar ao topo</span>
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/>
+      </svg>
+    </div>
+    <!-- fim do "back-to-top" -->
+    
+    <header class="cabecalho sem-margens" >
+      <a href="#"><img src="../img/favicon/favicon.png" alt="logo" class="logo" /></a>
+
+      <div onclick="alternarEscuro()" class="alternar-tema-escuro">
+        <button>
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path 
+             d="M22.088 13.126l1.912-1.126-1.912-1.126c-1.021-.602-1.372-1.91-.788-2.942l1.093-1.932-2.22-.02c-1.185-.01-2.143-.968-2.153-2.153l-.02-2.219-1.932 1.093c-1.031.583-2.34.233-2.941-.788l-1.127-1.913-1.127 1.913c-.602 1.021-1.91 1.372-2.941.788l-1.932-1.093-.02 2.219c-.01 1.185-.968 2.143-2.153 2.153l-2.22.02 1.093 1.932c.584 1.032.233 2.34-.788 2.942l-1.912 1.126 1.912 1.126c1.021.602 1.372 1.91.788 2.942l-1.093 1.932 2.22.02c1.185.01 2.143.968 2.153 2.153l.02 2.219 1.932-1.093c1.031-.583 2.34-.233 2.941.788l1.127 1.913 1.127-1.913c.602-1.021 1.91-1.372 2.941-.788l1.932 1.093.02-2.219c.011-1.185.969-2.143 2.153-2.153l2.22-.02-1.093-1.932c-.584-1.031-.234-2.34.788-2.942zm-10.117 6.874c-4.411 0-8-3.589-8-8s3.588-8 8-8 8 3.589 8 8-3.589 8-8 8zm.029-2c-3.313 0-6-2.687-6-6s2.687-6 6-6v12z">
+            </path>
+          </svg>
+        </button>
+      </div>
+
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <div class="placa placas " onclick="this.classList.toggle('ativo-menu')">
+          <svg class="burger svg-cabecalho" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+            <path class="linha linha1" d="M 50,35 H 30" />
+            <path class="linha linha2" d="M 50,35 H 70" />
+            <path class="linha linha3" d="M 50,50 H 30" />
+            <path class="linha linha4" d="M 50,50 H 70" />
+            <path class="linha linha5" d="M 50,65 H 30" />
+            <path class="linha linha6" d="M 50,65 H 70" />
+          </svg>
+          <svg class="x svg-cabecalho" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+            <path class="linha" d="M 34,32 L 66,68" />
+            <path class="linha" d="M 66,32 L 34,68" />
+          </svg>
+        </div>
+      </label>
+
+      <nav class="navegacao">
+        <a href="../../index.html" class="navegacao-item" style="--i: 0">Home</a>
+        <a href="Filosofos.html" class="navegacao-item" style="--i: 1">Filósofos</a>
+        <a href="felicidade.html" class="navegacao-item" style="--i: 2">Felicidade</a>
+        <a href="#" class="navegacao-item" id="ativo-item" style="--i: 2">Mitos Gregos</a>
+        <a href="contato.html" class="navegacao-item" style="--i: 3">Contato</a>
+      </nav>
+    </header> 
+    <section class="banner banner-imagem--mitos">
+      <h1 class="titulo-borda">Mitos Gregos</h1>
+      <span class="banner-descricao">Clique no botão abaixo para ver o conteúdo:</span>
+      <div class="container-botoes">
+        <a class="botao luminoso" id="botao-licaao" href="#licaao"></a>
+        <a class="botao luminoso" id="botao-cerberus" href="#cerberus"></a>
+        <a class="botao luminoso" id="botao-medusa" href="#medusa"></a>
+        <a class="botao luminoso" id="botao-hidra" href="#hidra"></a>
+      </div>
+    </section>
+
+
+    <main>
+      <section >
+        
+
+        <div class="container-conteudo">
+          <div class="background-conteudo">
+            <div class="conteudo">
+              <div id="licaao" class="linha-coluna">
+                <!-- Licaão -->
+                <h2 class="segundo-titulo-conteudo">Licaão: O Primeiro Lobisomem da Mitologia Grega</h2>
+                <hr/>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/licaao.png" alt="Imagem demonstrativa" />
+                </figure>
+              </div>
+              <div>
+                <h3>Introdução</h3>
+                <p>
+                  Licaão é uma figura da mitologia grega frequentemente associada à lenda do "primeiro lobisomem". Essa história intrigante envolve uma transformação aterrorizante que lançou as bases para a ideia do lobisomem na cultura popular. Você verá os principais elementos da história de Licaão.
+                </p>
+              </div>
+              <div>
+                <h3>Licaão, o Rei da Arcádia</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/rei.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Licaão era um rei que governava a região da Arcádia na Grécia Antiga. Ele era conhecido por seu comportamento cruel e impiedade, incluindo sacrifícios humanos em honra a Zeus.
+                </p>
+              </div>
+              <div>
+                <h3>A Visita de Zeus</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/zeus.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Um dia, o grande deus Zeus decidiu visitar a Terra disfarçado de humano para verificar os relatos sobre as ações cruéis de Licaão. Ele caminhou disfarçado pelo reino e foi acolhido na casa de Licaão.
+                </p>
+              </div>  
+              <div>
+                <h3>A Desonra a Zeus</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/punicao.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Durante sua visita, Zeus ficou chocado com a desonestidade e a crueldade de Licaão. No entanto, ele decidiu testar o rei ainda mais para ter certeza de suas ações. Naquela noite, Licaão preparou uma refeição para Zeus e serviu carne humana, testando assim a onisciência do deus.
+                </p>
+              </div>
+              <div>
+                <h3>A Transformação em Lobo</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/lobo.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Zeus, enfurecido com a desonra e crueldade de Licaão, revelou sua verdadeira identidade como deus. Em resposta à afronta, ele lançou um raio e amaldiçoou Licaão. O rei imediatamente se transformou em um lobo, condenado a viver como uma fera, incapaz de recuperar sua forma humana.
+                </p>
+              </div>
+              <div>
+                <h3>O Início da Lenda do Lobisomem</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/lenda.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A transformação de Licaão em lobo marcou o início da lenda do lobisomem na mitologia grega. A história foi transmitida ao longo das gerações, contribuindo para a formação do mito do ser humano que se transforma em lobo, uma figura conhecida como "lobisomem" em muitas culturas ao redor do mundo.
+                </p>
+              </div>
+              <div>
+                <h3>Conclusão</h3>
+                <p>
+                  A história de Licaão, o "primeiro lobisomem", é uma das lendas mais fascinantes da mitologia grega. Ela explora temas de punição divina, transformação e a origem do mito do lobisomem, que se tornou uma parte duradoura do folclore em muitas culturas. A maldição de Licaão e sua transformação em lobo são um lembrete das consequências da crueldade e da desonra aos deuses na mitologia grega.
+                </p>
+              </div>
+              <div id="cerberus" class="linha-coluna">
+                <!-- Cérberus-->
+                <h2 class="segundo-titulo-conteudo">Cérbero: O Guardião do Submundo na Mitologia Grega</h2>
+                <hr/>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/cerbero.png" alt="Imagem demonstrativa" />
+                </figure>
+              </div>
+              <div>
+                <h3>Introdução</h3>
+                <p>
+                  Cérbero é uma figura icônica da mitologia grega, frequentemente associada ao submundo e à morte. Ele é conhecido como o feroz cão de três cabeças encarregado de guardar a entrada do reino dos mortos, tornando-se uma criatura lendária que desempenha um papel fundamental em muitas histórias mitológicas. Você verá os principais elementos da história de Licaão.
+                </p>
+              </div>
+              <div>
+                <h3>Origem de Cérbero</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/origemC.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A origem de Cérbero varia de acordo com as fontes mitológicas, mas uma das versões mais conhecidas afirma que ele era filho de Tifão e Equidna, ambos monstros de linhagem divina e partes de famílias notoriamente perigosas.
+                </p>
+              </div>
+              <div>
+                <h3>A Função de Cérbero</h3>
+                <p>
+                  Cérbero desempenha um papel crucial como o cão guardião da entrada do submundo, que é governado por Hades, o deus dos mortos. Sua função é impedir que os vivos entrem e os mortos saiam, protegendo assim a ordem do reino dos mortos.
+                </p>
+              </div>
+              <div>
+                <h3>Descrição de Cérbero</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/descricaoC.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Cérbero é frequentemente descrito como um cão colossal com três cabeças, embora algumas variações de sua história mencionem um número diferente de cabeças. Além disso, ele tem uma cauda de dragão e frequentemente é representado com uma juba de serpentes.
+                </p>
+              </div>
+              <div>
+                <h3>Encontros com Heróis Mitológicos</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/heroisC.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Em várias histórias mitológicas, heróis, como Hércules (ou Héracles, em grego), Orfeu e Teseu, encontram Cérbero durante suas jornadas no submundo. Esses encontros geralmente envolvem superar o cão gigante como parte de uma tarefa ou desafio.
+                </p>
+              </div>
+              <div>
+                <h3>A Captura de Cérbero por Hércules</h3>
+                  <p>
+                  Uma das histórias mais famosas envolvendo Cérbero é a captura do cão por Hércules como parte de seus doze trabalhos. Hércules foi encarregado de trazer Cérbero à superfície, uma tarefa aparentemente impossível, mas ele conseguiu subjugá-lo temporariamente e levá-lo ao mundo dos vivos.
+                </p>
+              </div>
+              <div>
+                <h3>Significado de Cérbero</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/significadoC.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Cérbero simboliza a fronteira entre a vida e a morte, representando a passagem para o submundo. Sua ferocidade e papel como guardião refletem a visão dos gregos antigos sobre a importância de manter a ordem e a separação entre os reinos dos vivos e dos mortos.
+                </p>
+              </div>
+              <div>
+                <h3>Conclusão</h3>
+                <p>
+                  Cérbero é uma das criaturas mais memoráveis da mitologia grega, conhecido por seu papel como o cão guardião do submundo e por suas aparições em histórias heróicas. Sua representação como uma criatura de múltiplas cabeças e aspecto feroz o torna um dos seres mais emblemáticos da mitologia, e sua presença continua a inspirar narrativas e representações culturais na atualidade.
+                </p>
+              </div>
+              <div id="medusa" class="linha-coluna">
+                <!-- Medusa -->
+                <h2 class="segundo-titulo-conteudo">Medusa: A Infame Górgona da Mitologia Grega</h2>
+                <hr/>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/medusa.png" alt="Imagem demonstrativa" />
+                </figure>
+              </div>
+              <div>
+                <h3>Introdução</h3>
+                <p>
+                  Medusa é uma das figuras mais famosas e aterrorizantes da mitologia grega. Ela é uma das três Górgonas, criaturas lendárias com poderes especiais e uma aparência terrível. A história de Medusa envolve mitos complexos e personagens heroicos, e sua imagem icônica é reconhecida em todo o mundo.
+                </p>
+              </div>
+              <div>
+                <h3>Origens de Medusa</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/origem.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Medusa era uma das três Górgonas, filhas de Fórcis e Ceto, entidades marinhas consideradas monstruosas pelos gregos antigos. Medusa era a única das três Górgonas que era mortal e, ao contrário de suas irmãs, tinha cabelos de serpente.
+                </p>
+              </div>
+              <div>
+                <h3>Aparência de Medusa</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/aparencia.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A característica mais notável de Medusa era sua cabeça de serpente em vez de cabelos. Quem olhasse diretamente para seu rosto transformaria em pedra. Ela também tinha presas afiadas, garras de bronze e asas de ouro. Sua aparência era assustadora, e seu olhar mortal tornava-a ainda mais temida.
+                </p>
+              </div>
+              <div>
+                <h3>Encontro com Perseu</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/Perseu.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Medusa se tornou famosa quando o herói Perseu foi encarregado de decapitá-la como parte de uma tarefa heróica. Perseu recebeu ajuda dos deuses, incluindo Atena e Hermes, que o equiparam com um escudo espelhado para evitar olhar diretamente para Medusa. Usando essa estratégia, Perseu conseguiu cortar a cabeça de Medusa enquanto ela estava adormecida.
+                </p>
+              </div>
+              <div>
+                <h3>O Poder da Cabeça de Medusa</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/cabeca.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A cabeça decepada de Medusa manteve seu poder mortal, e Perseu a usou para petrificar seus inimigos. Ele a entregou a Atena, que a colocou em seu escudo, conhecido como o Égide, como uma forma de proteção.
+                </p>
+              </div>
+              <div>
+                <h3>Filhos de Medusa</h3>
+                <p>
+                  Após a morte de Medusa, ela deu à luz dois filhos, Pégaso, o famoso cavalo alado, e Crisaor, um gigante dourado. Eles nasceram quando Perseu decapitou Medusa, emergindo de seu corpo.
+                </p>
+              </div>
+              <div>
+                <h3>Significado de Medusa</h3>
+                <p>
+                  A história de Medusa carrega várias interpretações simbólicas, com algumas delas relacionadas ao poder feminino e à sexualidade reprimida. Sua imagem, com serpentes no lugar de cabelos e o poder petrificador do seu olhar, representa a ameaça da feminilidade que pode ser confrontada e controlada por heróis masculinos.
+                </p>
+              </div>
+              <div>
+                <h3>Conclusão</h3>
+                <p>
+                  Medusa é uma das figuras mais icônicas da mitologia grega, conhecida por sua aparência aterrorizante e pelo poder mortal de seu olhar. Sua história envolve o heroísmo de Perseu e sua decapitação pelas mãos do herói. A imagem de Medusa continua a ser um símbolo amplamente reconhecido na cultura popular e nas artes, representando a dualidade do poder e da vulnerabilidade feminina.
+                </p>
+              </div>
+              <!-- hidra -->
+              <div id="hidra" class="linha-coluna">
+                <h2 class="segundo-titulo-conteudo">Hidra de Lerna: A Serpente de Múltiplas Cabeças da Mitologia Grega</h2>
+                <hr/>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/hidra.png" alt="Imagem demonstrativa" />
+                </figure>
+              </div>
+              <div>
+                <h3>Origens da Hidra</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/origemH.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A Hidra era filha de Tifão e Equidna, duas criaturas monstruosas. Ela vivia em um pântano na região de Lerna, daí seu nome "Hidra de Lerna." A criatura era uma ameaça para os habitantes locais, já que sua mera presença trazia destruição.
+                </p>
+              </div>
+              <div>
+                <h3>Aparência da Hidra</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/aparenciaH.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A Hidra era uma serpente gigante com várias cabeças, geralmente nove, embora algumas versões da lenda mencionem mais. Uma das cabeças era imortal, o que tornava a Hidra quase invencível. Além disso, suas cabeças eram venenosas e cuspia fogo.
+                </p>
+              </div>
+              <div>
+                <h3>Confronto com Hércules</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/hidra.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A tarefa de derrotar a Hidra de Lerna foi um dos Doze Trabalhos atribuídos a Hércules como punição por seus crimes. Hércules enfrentou a Hidra com a ajuda de seu sobrinho Iolau.
+                </p>
+              </div>
+              <div>
+                <h3>Estratégia de Hércules</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/estrategica.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Hércules percebeu que cortar uma cabeça da Hidra não era suficiente, pois ela poderia regenerar duas cabeças no lugar de uma. Assim, ele usou uma estratégia criativa: à medida que cortava uma cabeça, ele cauterizava o coto com um tocha em chamas, impedindo que novas cabeças crescessem. No caso da cabeça imortal, ele a enterrou sob uma enorme rocha.
+                </p>
+              </div>
+              <div>
+                <h3>Ajuda de Iolau</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/ajuda.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Enquanto Hércules lutava contra a Hidra, Iolau o ajudou queimando a floresta ao redor do pântano. Ele usou as brasas para cauterizar os tocos das cabeças cortadas, tornando impossível sua regeneração.
+                </p>
+              </div>
+              <div>
+                <h3>Conclusão Bem-Sucedida</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/sucedida.webp" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Após uma luta feroz, Hércules conseguiu derrotar a Hidra de Lerna, cortando suas cabeças e garantindo que elas não pudessem se regenerar. Ele também mergulhou suas flechas em seu veneno mortal para futuras batalhas.
+                </p>
+              </div>
+              <div>
+                <h3>Importância da Vitória</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/vitoria.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A vitória sobre a Hidra de Lerna foi um dos mais notáveis dos Doze Trabalhos de Hércules e demonstrou sua inteligência e habilidade em combate. Ela também simboliza a luta do herói contra forças terríveis e invencíveis.
+                </p>
+              </div>
+              <div>
+                <h3>Legado da Hidra de Lerna</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/mitos/legadoH.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A Hidra de Lerna é uma das criaturas mais reconhecíveis da mitologia grega, e sua história continua a inspirar a cultura popular, aparecendo em filmes, jogos e outras formas de mídia. A lenda da Hidra também destaca a astúcia e coragem necessárias para superar desafios aparentemente impossíveis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="rodape">
+      <p>© FilosofiaBits - 2023</p>
+      <p>Desenvolvido por Yuri Hostins Raimundo</p>
+    </footer>
+  </body>
+</html>

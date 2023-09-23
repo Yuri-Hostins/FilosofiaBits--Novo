@@ -1,0 +1,164 @@
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999999;
+}
+
+.container--loader{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Estilizando o texto do loader */
+.texto-loader {
+  color: var(--white);
+  font-weight: 300;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+}
+
+/* Estilizando a animação do preloader */
+#preloader {
+  background: linear-gradient(45deg, var(--azul-loader), var(--verde-loader), var(--amarelo-loader));
+  background-size: 300%;
+  background-position: center;
+  animation: backgroundLoader 30s ease-in-out infinite;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  place-items: center;
+  place-content: center;
+}
+
+@keyframes backgroundLoader {
+	0%,
+	100% {
+		background-position: center;
+	}
+	25% {
+		background-position: left;
+	}
+	70% {
+		background-position: bottom;
+	}
+	90% {
+		background-position: right;
+	}
+}
+
+.container--animacao {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  animation: rotate 4s ease-out infinite;
+  filter: url("#gooey");
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.container--animacao .liquido {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ffd0c0, #F94C10);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  --ani_dur: 4s;
+}
+
+.container--animacao .liquido:nth-child(1) {
+  top: 0;
+  animation: animacao1 var(--ani_dur) linear infinite;
+}
+
+.container--animacao .liquido:nth-child(2) {
+  left: 0;
+  animation: animacao2 var(--ani_dur) linear infinite;
+}
+
+.container--animacao .liquido:nth-child(3) {
+  left: 100%;
+  animation: animacao3 var(--ani_dur) linear infinite;
+}
+
+.container--animacao .liquido:nth-child(4) {
+  top: 100%;
+  animation: animacao4 var(--ani_dur) linear infinite;
+}
+
+@keyframes animacao1 {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 100%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animacao2 {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animacao3 {
+  0% {
+    left: 100%;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes animacao4 {
+  0% {
+    top: 100%;
+  }
+
+  50% {
+    top: 0;
+  }
+
+  100% {
+    top: 0;
+  }
+}

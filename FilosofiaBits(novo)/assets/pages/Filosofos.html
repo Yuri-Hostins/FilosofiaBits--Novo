@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Tags Metas -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Links -->
+
+    <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.png">
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- BoxIcons v2.1.2 -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+
+    <!-- Script -->
+
+    <script src="../js/loader.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/alternar.js" defer></script>
+    <script src="../js/voltaTop.js" defer></script>
+
+    <!-- Título -->
+    <title>Filósofos | FilosofiaBits</title>
+  </head>
+
+  <body>
+
+    <!-- início do preloader -->
+		<section id="preloader">
+      <div class="inner">
+        <div class="loader"></div>
+        <div class="container--loader">
+          <div class="container--animacao">
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+					</div>
+					<svg>
+						<filter id="gooey">
+							<feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+							<feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -10 " />
+						</filter>
+					</svg>
+          <div>
+            <h4 class="texto-loader">O site está carregando. Por favor, aguarde um momento.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+		<!-- fim do preloader	 -->
+
+    <!-- início do "back-to-top" -->
+    <div class="box-botao" id="btn-top">
+      <span class="text-botao">Voltar ao topo</span>
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/>
+      </svg>
+    </div>
+    <!-- fim do "back-to-top" -->
+    
+    <header class="cabecalho sem-margens" >
+      <a href="#"><img src="../img/favicon/favicon.png" alt="logo" class="logo" /></a>
+
+      <div onclick="alternarEscuro()" class="alternar-tema-escuro">
+        <button>
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path 
+             d="M22.088 13.126l1.912-1.126-1.912-1.126c-1.021-.602-1.372-1.91-.788-2.942l1.093-1.932-2.22-.02c-1.185-.01-2.143-.968-2.153-2.153l-.02-2.219-1.932 1.093c-1.031.583-2.34.233-2.941-.788l-1.127-1.913-1.127 1.913c-.602 1.021-1.91 1.372-2.941.788l-1.932-1.093-.02 2.219c-.01 1.185-.968 2.143-2.153 2.153l-2.22.02 1.093 1.932c.584 1.032.233 2.34-.788 2.942l-1.912 1.126 1.912 1.126c1.021.602 1.372 1.91.788 2.942l-1.093 1.932 2.22.02c1.185.01 2.143.968 2.153 2.153l.02 2.219 1.932-1.093c1.031-.583 2.34-.233 2.941.788l1.127 1.913 1.127-1.913c.602-1.021 1.91-1.372 2.941-.788l1.932 1.093.02-2.219c.011-1.185.969-2.143 2.153-2.153l2.22-.02-1.093-1.932c-.584-1.031-.234-2.34.788-2.942zm-10.117 6.874c-4.411 0-8-3.589-8-8s3.588-8 8-8 8 3.589 8 8-3.589 8-8 8zm.029-2c-3.313 0-6-2.687-6-6s2.687-6 6-6v12z">
+            </path>
+          </svg>
+        </button>
+      </div>
+
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <div class="placa placas " onclick="this.classList.toggle('ativo-menu')">
+          <svg class="burger svg-cabecalho" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+            <path class="linha linha1" d="M 50,35 H 30" />
+            <path class="linha linha2" d="M 50,35 H 70" />
+            <path class="linha linha3" d="M 50,50 H 30" />
+            <path class="linha linha4" d="M 50,50 H 70" />
+            <path class="linha linha5" d="M 50,65 H 30" />
+            <path class="linha linha6" d="M 50,65 H 70" />
+          </svg>
+          <svg class="x svg-cabecalho" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+            <path class="linha" d="M 34,32 L 66,68" />
+            <path class="linha" d="M 66,32 L 34,68" />
+          </svg>
+        </div>
+      </label>
+
+      <nav class="navegacao">
+        <a href="../../index.html" class="navegacao-item" style="--i: 0">Home</a>
+        <a href="#" class="navegacao-item" id="ativo-item" style="--i: 1">Filósofos</a>
+        <a href="felicidade.html" class="navegacao-item" style="--i: 2">Felicidade</a>
+        <a href="mitos.html" class="navegacao-item" style="--i: 2">Mitos Gregos</a>
+        <a href="contato.html" class="navegacao-item" style="--i: 3">Contato</a>
+      </nav>
+    </header>
+
+    <section class="banner banner-imagem">
+      <h1 class="titulo-borda">Filósofos</h1>
+      <span class="banner-descricao">Clique no botão abaixo para ver o conteúdo:</span>
+      <div class="container-botoes">
+        <a class="botao luminoso" id="botao-socraticos" href="#socraticos"></a>
+        <a class="botao luminoso" id="botao-socrates" href="#socrates"></a>
+        <a class="botao luminoso" id="botao-platao" href="#platao"></a>
+        <a class="botao luminoso" id="botao-aristoteles" href="#aristoteles"></a>
+      </div>
+    </section>
+
+
+    <main>
+      <section >
+        
+
+        <div class="container-conteudo">
+          <div class="background-conteudo">
+            <div class="conteudo">
+              <div id="socraticos" class="linha-coluna">
+                <!-- Pré-Socráticos -->
+                <h2 class="segundo-titulo-conteudo">Introdução aos Pré-Socráticos</h2>
+                <hr/>
+                <p>
+                  Os Pré-Socráticos são figuras proeminentes na história da filosofia. Eles foram os primeiros filósofos
+                  da Grécia antiga a buscar explicações racionais e naturais para o mundo ao seu redor, rompendo com as
+                  explicações mitológicas tradicionais. Viveram entre os séculos VI e V a.C., um período de efervescência
+                  intelectual na Grécia antiga, e suas ideias formaram a base para o desenvolvimento posterior da
+                  filosofia ocidental.
+                </p>
+              </div>
+              <div>
+                <h3>Contexto Histórico</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/conceito.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Nesse período, a Grécia estava passando por transformações significativas. As cidades-estado gregas estavam se desenvolvendo politicamente, economicamente e culturalmente. As histórias míticas tradicionais não satisfaziam mais a curiosidade dos gregos sobre a natureza do mundo, e eles começaram a buscar explicações racionais e lógicas.
+                </p>
+              </div>
+              <div>
+                <h3>Contribuições dos Pré-Socráticos</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/contribuicoes.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Os Pré-Socráticos exploraram uma variedade de temas, desde a natureza dos elementos até as causas do movimento e a origem do cosmos. Eles introduziram conceitos-chave que moldariam a filosofia subsequente, como a busca de um "archê" (princípio fundamental) subjacente a todas as coisas e a ideia de que o mundo é governado por leis naturais, não por deuses caprichosos.
+                </p>
+                <p>
+                  Nos próximos tópicos, exploraremos as contribuições individuais dos principais Pré-Socráticos, incluindo Tales de Mileto, Anaximandro, Anaxímenes, Pitágoras, Heráclito, Parmênides, Empédocles, Anaxágoras, Leucipo e Demócrito. Cada um deles trouxe sua perspectiva única para o debate filosófico da época, contribuindo para a rica tapeçaria do pensamento pré-socrático.
+                </p>
+                <p>
+                  Ao estudar esses filósofos pioneiros, ganhamos uma compreensão mais profunda das raízes da filosofia ocidental e da busca incessante do conhecimento humano sobre o universo e nossa própria existência. Continue a explorar nosso site para aprender mais sobre essas figuras notáveis e suas ideias revolucionárias.
+                </p>
+              </div>
+              <div>
+                <h3>Tales de Mileto: A Água como Princípio Fundamental</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/tales.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Tales de Mileto é frequentemente considerado o primeiro filósofo na história da filosofia ocidental. Ele viveu por volta do século VI a.C. na cidade grega de Mileto, localizada na costa oeste da Ásia Menor (atual Turquia). Tales é conhecido por suas contribuições significativas para a filosofia natural e por ser um dos sete sábios da Grécia Antiga.
+                </p>
+              </div>  
+              <div>
+                <h3>Contribuições Filosóficas de Tales</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/contribuicoes-tales.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A principal contribuição de Tales de Mileto para a filosofia foi a proposição de que a água era o princípio fundamental (archê) subjacente a todas as coisas. Ele acreditava que a água era a substância primordial da qual todas as coisas se originavam e à qual todas as coisas retornavam. Isso representou uma mudança radical em relação às explicações mitológicas que atribuíam os eventos naturais aos caprichos dos deuses.
+                </p>
+              </div>
+              <div>
+                <h3>Pensamento Racional</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/pensamento-tales.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  O pensamento de Tales era notavelmente racional. Ele buscava explicar fenômenos naturais, como a chuva e a seca, em termos de processos naturais e causas físicas, em vez de recorrer a explicações mitológicas. Isso marcou o início da tradição filosófica de buscar explicações racionais e naturais para os fenômenos do mundo.
+                </p>
+              </div>
+              <div>
+                <h3>Legado de Tales de Mileto</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/legado-tales.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  As ideias de Tales influenciaram gerações posteriores de filósofos e cientistas gregos. Sua abordagem racional e sua busca por princípios unificadores ajudaram a estabelecer as bases da ciência e da filosofia ocidental. Além disso, sua ênfase na água como elemento primordial desencadeou debates e questionamentos sobre a natureza fundamental da realidade, que seriam explorados por outros Pré-Socráticos.
+                </p>
+              </div>
+              <div>
+                <h3>Considerações Finais</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/consideracoes-tales.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Tales de Mileto é uma figura icônica na história do pensamento humano, pois marcou a transição da explicação mitológica para a explicação racional do mundo natural. Suas ideias pioneiras estabeleceram um precedente para futuros filósofos e cientistas que buscavam compreender o universo com base na razão e na observação, tornando-o uma figura essencial na história da filosofia ocidental.
+                </p>
+              </div>
+              <div>
+                <h3>Anaximandro: O Ápeiron e a Busca pelo Princípio Indefinido</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/Anaximandro.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Anaximandro, contemporâneo de Tales de Mileto, foi outro dos primeiros filósofos Pré-Socráticos da Grécia antiga. Ele nasceu em Mileto, por volta de 610 a.C., e é conhecido por suas teorias inovadoras sobre a natureza fundamental do universo.
+                </p>
+              </div>
+              <div>
+                <h3>O Conceito de Ápeiron</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/conceito-anaximandro.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Uma das contribuições mais significativas de Anaximandro para a filosofia foi sua ideia do "ápeiron". Ele acreditava que havia uma substância fundamental e indefinida, o ápeiron, que era a fonte de todas as coisas. Diferentemente de Tales, que escolheu a água como princípio, Anaximandro argumentava que o ápeiron era uma realidade mais abstrata e universal, que não podia ser reduzida a uma única substância.
+                </p>
+              </div>
+              <div>
+                <h3>Explicação das Mudanças na Natureza</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/mudanças-climáticas.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Anaximandro também procurou explicar as mudanças na natureza. Ele propôs que o ápeiron estava em constante movimento e que as coisas surgiam e desapareciam à medida que se separavam ou retornavam ao ápeiron. Sua teoria buscava dar conta da diversidade e da dinâmica do mundo natural.
+                </p>
+              </div>
+              <div>
+                <h3>Pensamento Astronômico e Geográfico</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/espaco-geografico.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Além de suas contribuições para a filosofia natural, Anaximandro também é conhecido por seu interesse pela astronomia e geografia. Ele foi um dos primeiros a criar um mapa do mundo conhecido e a propor uma explicação para fenômenos celestes, como eclipses.
+                </p>
+              </div>
+              <div>
+                <h3>Legado de Anaximandro</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/anaximandro-legado.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  O pensamento de Anaximandro teve um impacto duradouro na filosofia grega e influenciou muitos filósofos posteriores. Sua ênfase na busca por um princípio fundamental que não era restrito a uma substância específica ajudou a abrir caminho para a especulação metafísica e a reflexão filosófica sobre a natureza da realidade.
+                </p>
+              </div>
+              <div>
+                <h3>Considerações Finais</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/consideracoes-tales.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Anaximandro é reconhecido como um dos primeiros pensadores a tentar sistematizar uma visão naturalista do mundo, buscando explicações racionais e não mitológicas para os fenômenos naturais. Sua concepção do ápeiron como um princípio indefinido e universal deixou uma marca profunda no desenvolvimento da filosofia e da ciência ocidentais.
+                </p>
+              </div>
+              <div>
+                <h3>Anaxímenes: O Ar como Princípio Fundamental e a Condensação-Rarefação</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/anaximenes.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Anaxímenes foi outro filósofo pré-socrático notável, que viveu por volta do século VI a.C. Ele também era de Mileto, assim como Tales e Anaximandro, e contribuiu significativamente para o desenvolvimento da filosofia natural.
+                </p>
+              </div>
+              <div>
+                <h3>O Princípio do Ar</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/Anaxímenes-de-Mileto-ar.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Anaxímenes acreditava que o ar era o princípio fundamental (archê) que constituía todas as coisas. Para ele, o ar era uma substância primordial que, quando condensada e rarefeita, dava origem a todas as diferentes formas de matéria que observamos no mundo. Essa teoria representou uma mudança em relação à água de Tales e ao ápeiron de Anaximandro.
+                </p>
+              </div>
+              <div>
+                <h3>Condensação e Rarefação</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/Anaximenes-Condensacao.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Anaxímenes explicava as mudanças na natureza em termos de condensação e rarefação do ar. Por exemplo, ele argumentava que quando o ar se condensava, tornava-se água ou terra, enquanto quando se rarefazia, se transformava em fogo ou ar mais rarefeito. Isso era uma tentativa de dar conta das transformações naturais que ocorriam ao nosso redor.
+                </p>
+              </div>
+              <div>
+                <h3>Comparação com os Elementos de Empédocles</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/Comparacao.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  As ideias de Anaxímenes sobre a transformação da matéria por meio da condensação e rarefação do ar são interessantes de comparar com as teorias posteriores de Empédocles, que postulou a existência de quatro elementos (terra, água, ar e fogo) como constituintes da matéria. Essa comparação pode destacar as diferentes abordagens dos filósofos pré-socráticos para a natureza da realidade.
+                </p>
+              </div>
+              <div>
+                <h3>Legado de Anaxímenes</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/Legado-Anaxímenes.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Anaxímenes desempenhou um papel importante na evolução da filosofia pré-socrática, contribuindo para o debate sobre o princípio fundamental da natureza. Sua ênfase na explicação naturalista e na transformação da matéria influenciou filósofos e cientistas posteriores, à medida que buscavam compreender as leis naturais que governam o universo.
+                </p>
+              </div>
+              <div>
+                <h3>Considerações Finais</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/consideracoes-tales.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Anaxímenes é lembrado como um dos primeiros filósofos a propor uma teoria específica sobre a composição da matéria e a explicação de suas mudanças. Seu foco no ar como princípio fundamental e sua abordagem naturalista continuam a ser tópicos de interesse na história da filosofia e da ciência.
+                </p>
+              </div>
+              <div>
+                <h3>Pitágoras: Matemática e a Teoria dos Números como Fundamentos da Realidade</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/teorema-pitagoras.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Pitágoras é uma das figuras mais icônicas da filosofia pré-socrática. Ele viveu por volta do século VI a.C. e é conhecido por suas contribuições tanto para a filosofia quanto para a matemática. Seu trabalho influenciou profundamente o pensamento ocidental.
+                </p>
+              </div>
+              <div>
+                <h3>Contribuições para a Matemática</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/Contribuicoes-matematica.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Pitágoras e seus seguidores, conhecidos como pitagóricos, são famosos por suas contribuições à matemática. Eles desenvolveram o teorema de Pitágoras, que estabelece uma relação entre os lados de um triângulo retângulo. Essa descoberta fundamental revolucionou a geometria e a trigonometria.
+                </p>
+              </div>
+              <div>
+                <h3>A Importância dos Números</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/importancia.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Para Pitágoras, os números desempenhavam um papel crucial na compreensão da realidade. Ele acreditava que os números eram os blocos de construção do universo e que a harmonia matemática era a chave para entender a ordem subjacente do cosmos.
+                </p>
+              </div>
+              <div>
+                <h3>A Doutrina das Espécies</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/doutrina.png" alt="Imagem demonstrativa" /> 
+                </figure>
+                <p>
+                  Além da matemática, Pitágoras também desenvolveu a doutrina das espécies, que afirmava que os números e as relações matemáticas governavam não apenas a música e a geometria, mas também a estrutura do mundo natural. Essa ideia de uma ordem matemática subjacente à realidade influenciou muitos filósofos e cientistas posteriores.
+                </p>
+              </div>
+              <div>
+                <h3>Filosofia e Ética</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/etica.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Pitágoras também fez contribuições à filosofia e à ética. Ele enfatizava a importância da busca do conhecimento e da sabedoria, bem como a prática da autodisciplina e da moderação. Acredita-se que ele tenha fundado uma comunidade pitagórica que promovia esses princípios.
+                </p>
+              </div>
+              <div>
+                <h3>Legado de Pitágoras</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/legado-pitagoras.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  O legado de Pitágoras na história da filosofia é duradouro. Suas ideias sobre a importância dos números e da harmonia matemática influenciaram fortemente a filosofia, a ciência e a música ao longo dos séculos. Ele também ajudou a estabelecer a conexão entre a matemática e a compreensão da natureza, um tema que continuou a ser explorado por filósofos e cientistas ao longo da história.
+                </p>
+              </div>
+              <div>
+                <h3>Considerações Finais</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/consideracoes-tales.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Pitágoras é uma figura notável que uniu a matemática, a filosofia e a ética em uma abordagem integrada para compreender o mundo e nossa relação com ele. Suas contribuições marcaram o início de uma tradição de investigação racional que moldou o pensamento ocidental.
+                </p>
+              </div>
+              <div>
+                <h3>Heráclito: O Fluxo Perpétuo e a Filosofia do Devir</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/heraclito.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p> 
+                  Heráclito é um dos filósofos pré-socráticos mais influentes e intrigantes. Ele viveu por volta do século VI a.C., na cidade de Éfeso, na Grécia, e suas ideias se destacam pela ênfase na mudança constante e no "fluxo perpétuo" do universo.
+                </p>
+              </div>
+              <div>
+                <h3>A Filosofia do Fluxo</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/Fluxo.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Heráclito é conhecido por sua afirmação de que "tudo flui" (panta rhei). Ele acreditava que o mundo está em constante mudança e que a estabilidade é uma ilusão. Para Heráclito, a realidade é um processo dinâmico no qual tudo está em constante transformação.
+                </p>
+              </div>
+              <div>
+                <h3>O Fogo como Princípio</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/fogo.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Heráclito identificou o fogo como o princípio fundamental que governa essa mudança. Para ele, o fogo simbolizava não apenas o elemento material, mas também a transformação constante e o princípio ordenador que subjaz à realidade em constante evolução.
+                </p>
+              </div>
+              <div>
+                <h3>Unidade de Contrários</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/Unidade.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Heráclito argumentou que as polaridades e contradições são parte intrínseca da realidade. Ele via o conflito e a tensão entre opostos, como o calor e o frio, o bem e o mal, como motores da mudança e do progresso.
+                </p>
+              </div>
+              <div>
+                <h3>Alegoria do Rio</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/rio.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Heráclito frequentemente usava a metáfora de um rio para ilustrar sua filosofia. Ele comparava a realidade a um rio em constante movimento, onde você nunca entra no mesmo rio duas vezes, pois tanto o rio quanto o indivíduo estão sempre mudando.
+                </p>
+              </div>
+              <div>
+                <h3>Legado de Heráclito</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/legado-he4raclito.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  As ideias de Heráclito tiveram um impacto duradouro na filosofia, influenciando pensadores posteriores como Hegel e Nietzsche. Sua ênfase na mudança e na contradição desafiou concepções estáticas de realidade e incentivou uma compreensão mais profunda da complexidade do mundo.
+                </p>
+              </div>
+              <div>
+                <h3>Considerações Finais</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/consideracoes-tales.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Heráclito é lembrado como um filósofo que destacou a natureza dinâmica e impermanente da realidade. Sua filosofia do fluxo e da mudança contínua estimulou reflexões sobre a natureza da existência e a relação entre opostos na busca pelo entendimento mais profundo do universo.
+                </p>
+              </div>
+              <div>
+                <h3>Legado dos Pré-Socráticos</h3>
+                <p>
+                  O legado dos Pré-Socráticos é vasto e profundo, moldando o curso da filosofia e da ciência ao longo dos séculos. Suas contribuições influenciaram filósofos posteriores e diversas escolas filosóficas. Aqui estão alguns aspectos do legado dos Pré-Socráticos:
+                </p>
+                <ul>
+                  <li class="item-conteudo">
+                    <strong>Transição para a Filosofia Racional</strong>:
+                    Os Pré-Socráticos foram os pioneiros na busca de explicações racionais e naturais para o mundo, afastando-se das explicações mitológicas. Essa transição marcou o início da filosofia como uma disciplina baseada na razão e na observação.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Metafísica e Ontologia</strong>:
+                    As discussões sobre os princípios fundamentais (archê) levantadas pelos Pré-Socráticos estabeleceram as bases da metafísica, uma área central da filosofia que explora a natureza da realidade. Suas ideias sobre o Ser, o ápeiron, o fogo, o ar e outros princípios influenciaram filósofos posteriores na busca por compreender a essência do mundo.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Filosofia da Ciência</strong>:
+                    As contribuições de pensadores como Anaximandro e Anaxímenes à explicação das mudanças naturais através de processos naturais contribuíram para o desenvolvimento da filosofia da ciência. Eles foram pioneiros em aplicar o pensamento lógico e sistemático à compreensão dos fenômenos naturais.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Influência na Matemática e na Lógica</strong>:
+                    Pitágoras, com seu foco nos números, e Heráclito, com sua ênfase na dialética e na contradição, influenciaram o desenvolvimento da matemática e da lógica. As contribuições de Pitágoras à geometria e à teoria dos números são especialmente notáveis.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Teorias Atômicas</strong>:
+                    As ideias de Leucipo e Demócrito sobre a existência de átomos como partículas indivisíveis influenciaram diretamente a filosofia da física e a ciência moderna. A teoria atômica é uma pedra angular da física contemporânea.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Herança Filosófica Duradoura</strong>:
+                    As discussões sobre o devir (mudança) e a relação entre opostos, inspiradas em Heráclito, tiveram um impacto duradouro na filosofia ocidental. Elas continuaram a influenciar filósofos que exploraram temas como dialética, existencialismo e fenomenologia.
+                  </li>
+                </ul>
+              </div>
+
+              <div id="socrates" class="linha-coluna">
+                <!-- Sócrates -->
+                <h2 class="segundo-titulo-conteudo">Sócrates: O Pai da Filosofia Ocidental</h2>
+                <hr/>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/Socrates.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Sócrates é uma das figuras mais influentes na história da filosofia ocidental. Ele viveu em Atenas, Grécia, no século V a.C., e sua abordagem à filosofia e ao pensamento crítico teve um impacto duradouro. Aqui estão alguns tópicos importantes relacionados a Sócrates:
+                </p>
+              </div>
+              <div>
+                <h3>Método Socrático</h3>
+                <ul>
+                  <p>
+                    O "método socrático" é uma abordagem de questionamento crítico desenvolvida por Sócrates para estimular o pensamento reflexivo e promover a busca pelo conhecimento. Ele é frequentemente usado como uma ferramenta para explorar conceitos, examinar crenças e alcançar uma compreensão mais profunda de questões filosóficas e éticas. Aqui está uma explicação mais detalhada de como o método socrático funciona:
+                  </p>
+                  <li class="item-conteudo">
+                    <strong>Diálogo e Perguntas Socráticas:</strong> 
+                    Sócrates frequentemente iniciava conversas com outras pessoas fazendo perguntas. Essas perguntas não eram meramente informativas, mas destinavam-se a fazer com que o interlocutor pensasse criticamente sobre suas próprias crenças e conhecimentos.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Elenchus (Refutação):</strong> 
+                    O coração do método socrático era o processo de elenchus, que envolvia o uso de perguntas cuidadosamente formuladas para expor contradições ou inconsistências nas respostas de alguém.
+                    Sócrates não se limitava a aceitar respostas superficiais; ele continuava a fazer perguntas de acompanhamento para aprofundar a investigação.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Ironia Socrática:</strong> 
+                    Sócrates frequentemente usava a ironia socrática, fingindo ignorância ou concordando com uma ideia equivocada apresentada por seu interlocutor. Isso levava a pessoa a defender e explicar suas crenças com mais detalhes, muitas vezes revelando contradições ou falhas em seu raciocínio.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Maiêutica (Parto das Ideias):</strong> 
+                    Sócrates comparava seu método à maiêutica, o processo de "dar à luz" ideias. Ele acreditava que as respostas corretas já estavam dentro das pessoas, mas precisavam ser trazidas à luz por meio do questionamento e da reflexão crítica.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Busca pela Definição Universal:</strong> 
+                    Sócrates frequentemente buscava uma definição universal para conceitos abstratos, como justiça, coragem ou virtude. Ele fazia isso fazendo perguntas sobre exemplos específicos e, assim, chegando a uma compreensão mais precisa desses conceitos.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Humildade Intelectual:</strong> 
+                    Um aspecto importante do método socrático era a humildade intelectual. Sócrates reconhecia sua própria ignorância e enfatizava que a verdadeira sabedoria estava em reconhecer a própria falta de conhecimento. Portanto, ele não afirmava ser um mestre ou detentor de conhecimento absoluto.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Impacto e Legado:</strong> 
+                    O método socrático teve um impacto significativo na filosofia e na pedagogia. Ele influenciou a maneira como a filosofia é ensinada e como os filósofos abordam questões complexas. Além disso, contribuiu para a tradição de questionamento crítico que ainda é valorizada na educação contemporânea.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3>Sócrates: Conhecimento e Ignorância</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/Conhecimento.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Um dos aspectos mais marcantes da filosofia de Sócrates é sua abordagem à questão do conhecimento e da ignorância. Este tópico explora a maneira como Sócrates abordou esses conceitos:
+                </p>
+                <ul>
+                  <li class="item-conteudo">
+                    <strong>"Só sei que nada sei"</strong>
+                    Com essa frase, Sócrates estava expressando sua profunda consciência de sua própria ignorância. Ele reconhecia que, apesar de suas muitas conversas e questionamentos, ele não era detentor de um conhecimento absoluto.
+                    sso reflete a humildade intelectual de Sócrates, que estava disposto a admitir sua falta de conhecimento em vez de fingir ter respostas para todas as questões. Essa atitude o diferenciava dos sofistas, que frequentemente afirmavam ter todo o conhecimento necessário.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Reconhecimento da Ignorância como Primeiro Passo:</strong>
+                    Sócrates enfatizava que reconhecer a própria ignorância era o primeiro passo essencial para a busca do conhecimento. Para ele, a ignorância não era um obstáculo, mas sim o ponto de partida para a jornada intelectual.
+                    Ele acreditava que, se alguém acreditasse que já sabia tudo, não teria incentivo para buscar o conhecimento adicional.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Verdadeira Sabedoria e Autoconhecimento:</strong>
+                    Sócrates argumentava que a verdadeira sabedoria estava em reconhecer a própria falta de conhecimento. Para ele, o sábio era aquele que compreendia a extensão de sua ignorância e estava disposto a aprender e crescer intelectualmente.
+                    Ele acreditava que a busca constante pelo aprimoramento do entendimento pessoal era o caminho para alcançar a verdadeira sabedoria, em contraste com a arrogância intelectual que muitos demonstravam.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Ironia Socrática e Refutação:</strong>
+                    Sócrates frequentemente utilizava a ironia socrática, fingindo ignorância ou concordando com as crenças errôneas dos outros. Ele fazia isso não para zombar, mas para levar as pessoas a examinar e questionar suas próprias convicções.
+                    Através do questionamento cuidadoso e da refutação de ideias inconsistentes, Sócrates ilustrava a extensão da ignorância humana e incentivava o pensamento crítico.
+                  </li>
+                </ul>
+                <p>
+                  O reconhecimento da própria ignorância, a humildade intelectual e a busca constante pela verdade são princípios fundamentais da filosofia socrática. Essas ideias continuam a ressoar na filosofia e na educação contemporâneas, destacando a importância do questionamento, da autorreflexão e do aperfeiçoamento intelectual como componentes essenciais da busca do conhecimento e da sabedoria.
+                </p>
+              </div>
+              <div>
+                <h3>Sócrates: Ética e Virtude</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/virtude.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Sócrates é amplamente conhecido por sua preocupação com questões éticas e morais. Este tópico explora suas ideias relacionadas à ética e à virtude:
+                </p>
+                <ul>
+                  <li class="item-conteudo">
+                    <strong>Virtude como a Mais Alta Forma de Conhecimento:</strong>
+                    Sócrates acreditava que a virtude, ou seja, a excelência moral, era a mais alta forma de conhecimento. Ele argumentava que, se alguém realmente entendesse o que era virtuoso, automaticamente agiria de acordo com a virtude.
+                    Para Sócrates, a ignorância era a raiz de todas as más ações. As pessoas agiam mal porque não compreendiam plenamente o que era bom e virtuoso.
+                  </li>
+                  <li class="item-conteudo">
+                    Destaque sua crença de que as pessoas fazem o que acreditam ser melhor para si, mas muitas vezes estão equivocadas em sua compreensão do que é realmente bom.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Ninguém Faz o Mal de Forma Deliberada:</strong>
+                    Sócrates também afirmava que ninguém faz o mal de forma deliberada. Ele acreditava que todas as ações, incluindo as más ações, eram o resultado de um julgamento equivocado. As pessoas agiam de acordo com o que acreditavam ser melhor para si, mas frequentemente estavam equivocadas em sua compreensão do que era verdadeiramente bom.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Aquisição de Conhecimento e Virtude:</strong>
+                    Sócrates argumentava que, ao adquirir conhecimento sobre o que é virtuoso e bom, as pessoas naturalmente escolheriam agir de maneira virtuosa. Ele via a educação moral e intelectual como interligadas.
+                    Para Sócrates, a chave para a virtude era a autorreflexão e o questionamento constante. À medida que as pessoas aprofundavam sua compreensão ética, suas ações seriam moldadas por esse conhecimento.    
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>"Uma Vida Não Examinada Não Vale a Pena Ser Vivida":</strong>
+                    A famosa afirmação de Sócrates, "uma vida não examinada não vale a pena ser vivida," reflete sua crença na importância da reflexão ética constante. Ele argumentava que as pessoas deveriam questionar suas próprias ações, crenças e valores regularmente.
+                    Para Sócrates, uma vida dedicada ao autoexame e à busca da verdade era uma vida virtuosa. Isso implicava a responsabilidade de avaliar continuamente se nossas ações eram moralmente justificadas.      
+                  </li>
+                </ul>
+                <p>
+                  Em resumo, Sócrates via a virtude como o resultado natural do conhecimento ético e acreditava que as pessoas agiam mal devido à ignorância. Ele enfatizava a importância da reflexão e do questionamento como meios de aprimorar nosso entendimento ético e, assim, conduzir a uma vida mais virtuosa. Suas ideias sobre virtude e conhecimento tiveram um impacto duradouro na filosofia moral e na reflexão ética.                </p>
+              </div>
+              <div>
+                <h3>Sócrates: O Julgamento e a Condenação</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/morte.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  O julgamento de Sócrates em 399 a.C. foi um evento significativo na história da filosofia e da democracia ateniense. Aqui está o contexto do julgamento, as acusações contra ele e sua defesa:
+                </p>
+                <ul>
+                  <li class="item-conteudo">
+                    <strong>Contexto do Julgamento:</strong>
+                    Atenas, no final do século V a.C., era uma cidade-estado democrática e culturalmente rica, mas também estava enfrentando turbulências políticas e sociais.
+                    Sócrates, um filósofo que se destacou por seu método de questionamento crítico, havia acumulado seguidores e críticos em Atenas. Ele era conhecido por desafiar as convenções e crenças tradicionais.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Acusações:</strong>
+                    Sócrates foi acusado por dois principais grupos de acusadores: os "melhores" (ou seja, os mais influentes e respeitados cidadãos) e os "piores" (aqueles que acreditavam que Sócrates corrompia a juventude e desprezava os deuses da cidade).
+                    As acusações contra Sócrates podem ser resumidas em duas principais:
+                    <ul>
+                      <br/>
+                      <li>
+                        <strong>Impiedade (Asebeia):</strong>
+                        Ele foi acusado de não reconhecer os deuses da cidade e de introduzir novos deuses.
+                      </li>
+                      <br/>
+                      <li>
+                        <strong>Corrupção da Juventude (Moralidade Corrompida):</strong>
+                        Sócrates foi acusado de influenciar negativamente a juventude ateniense, levando-os a questionar valores tradicionais e autoridades.
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Defesa de Sócrates:</strong>
+                    Durante seu julgamento, Sócrates teve a oportunidade de se defender, mas sua abordagem foi notável. Em vez de buscar a absolvição convencional ou se retratar, ele escolheu defender sua missão filosófica e seu compromisso com o questionamento e a busca da verdade.
+                    Sócrates argumentou que sua missão era um serviço à sociedade, mesmo que fosse interpretada como subversiva. Ele afirmou que seu diálogo filosófico e método socrático eram um esforço para melhorar a moral e o conhecimento dos cidadãos atenienses.
+                    Ele alegou que, ao fazer as pessoas questionarem suas crenças e examinarem suas vidas, estava contribuindo para o bem-estar da cidade e para a formação de cidadãos mais virtuosos e sábios.
+                  </li>
+                  <p>
+                    Apesar de sua defesa apaixonada, Sócrates foi considerado culpado por um pequeno margem de votos e condenado à morte por envenenamento. Sua escolha de manter sua integridade filosófica, mesmo sob ameaça de execução, e sua defesa eloquente de sua missão filosófica tornaram-no um ícone de coragem intelectual e respeito aos princípios éticos, deixando um legado duradouro na história da filosofia.
+                  </p>
+                </ul>
+              </div>
+              <div>
+                <h3>O Julgamento de Sócrates: Veredicto e Sentença</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/fim.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Vamos explorar o desenvolvimento do julgamento de Sócrates:
+                </p>
+                <ul>
+                  <li class="item-conteudo">
+                    <strong>O Veredicto de Culpado:</strong>
+                    Após as acusações e a defesa de Sócrates, o tribunal ateniense votou e declarou-o culpado das acusações de impiedade e corrupção da juventude. O veredicto foi uma decisão controversa e estreitamente dividida.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>A Sentença de Morte:</strong>
+                    Após ser considerado culpado, Sócrates foi condenado à morte. A sentença consistia em beber cicuta, um veneno letal.
+                    Sócrates aceitou a sentença sem resistência, recusando a oportunidade de fugir da prisão ou de buscar clemência. Sua disposição em aceitar a morte em vez de comprometer seus princípios filosóficos tornou-se um elemento icônico de sua história.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>A Democracia Ateniense e o Julgamento:</strong>
+                    O julgamento e a condenação de Sócrates levantaram questões sobre a relação entre a filosofia crítica e a democracia. Atenas era uma democracia, mas Sócrates foi condenado por questionar as tradições e autoridades da cidade.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Legado de Coragem Filosófica:</strong>
+                    O julgamento e a condenação de Sócrates não apenas o tornaram um mártir da filosofia, mas também reforçaram seu legado de coragem intelectual e respeito aos princípios éticos.
+                    Sua disposição em aceitar a morte em vez de renunciar à sua filosofia influenciou a percepção posterior de sua integridade.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Reflexões sobre a Filosofia e a Sociedade:</strong>
+                    O julgamento de Sócrates continua a inspirar debates sobre a relação entre o pensamento crítico e a autoridade estabelecida, bem como sobre a ética da filosofia em uma sociedade democrática.
+                    A história de Sócrates destaca o dilema entre a livre expressão de ideias e os limites impostos pela sociedade.
+                  </li>
+                  <p>
+                    O julgamento de Sócrates e sua aceitação da sentença de morte são eventos emblemáticos na história da filosofia e da democracia. Sua história continua a ser uma fonte de inspiração para pensadores que defendem a liberdade de pensamento e a integridade intelectual.
+                  </p>
+                </ul>
+              </div>
+              <div>
+                <h3>Legado do Julgamento de Sócrates</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/legado.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  O julgamento e a execução de Sócrates tiveram um impacto duradouro na filosofia e na cultura ocidental. Vamos explorar o legado desses eventos:
+                </p>
+                <ul>
+                  <li class="item-conteudo">
+                    <strong>Influência na Filosofia:</strong>
+                    O julgamento de Sócrates solidificou sua posição como uma figura icônica na história da filosofia. Sua coragem em enfrentar a morte em vez de renunciar aos princípios filosóficos inspirou gerações de filósofos.                  </li>
+                  <li class="item-conteudo">
+                    <strong>Estabelecimento do Diálogo Filosófico:</strong>
+                    Sócrates é lembrado por seu método de questionamento crítico e pelo uso do diálogo como uma ferramenta central para a busca do conhecimento. Essa abordagem influenciou muitos filósofos posteriores.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Contribuição para a Ética:</strong>
+                    As ideias de Sócrates sobre ética, virtude e o exame constante da vida influenciaram profundamente o desenvolvimento da ética na filosofia ocidental. Seu foco na autorreflexão ética e na busca da verdade continuou a inspirar a reflexão sobre o comportamento moral.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Contribuição para a Ética:</strong>
+                    As ideias de Sócrates sobre ética, virtude e o exame constante da vida influenciaram profundamente o desenvolvimento da ética na filosofia ocidental. Seu foco na autorreflexão ética e na busca da verdade continuou a inspirar a reflexão sobre o comportamento moral.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Tensão entre Filosofia e Sociedade:</strong>
+                    O julgamento de Sócrates destaca a tensão entre a filosofia crítica e a autoridade estabelecida na sociedade. Isso levanta questões sobre a liberdade de expressão e a responsabilidade dos filósofos em uma democracia.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>A Filosofia como um Chamado para a Reflexão:</strong>
+                    A afirmação de Sócrates de que "uma vida não examinada não vale a pena ser vivida" tornou-se um lema para a reflexão constante sobre nossas ações, crenças e valores. Essa frase ressoa na importância da autorreflexão.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Inspirando Futuros Filósofos:</strong>
+                    Sócrates deixou um legado de coragem intelectual e compromisso com a verdade. Seu exemplo continuou a inspirar filósofos e pensadores que valorizam a honestidade intelectual e a busca incansável pelo conhecimento.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Crítica à Democracia:</strong>
+                    A condenação de Sócrates também levantou questões sobre a natureza da democracia. Alguns argumentaram que a democracia ateniense falhou ao condenar um filósofo que buscava a verdade em vez de apaziguar as convenções.
+                  </li>
+                  <p>
+                    Em resumo, o julgamento e a morte de Sócrates deixaram uma marca indelével na história da filosofia e da cultura ocidental. Sua vida e morte serviram como um lembrete duradouro da importância da busca da verdade, do questionamento crítico e da coragem intelectual na filosofia e na sociedade.
+                  </p>
+                </ul>
+              </div>
+              <div>
+                <h3>Conclusão</h3>
+                <p>
+                  A história de Sócrates, o pai da filosofia ocidental, é uma narrativa de coragem intelectual, questionamento incansável e uma profunda busca pela verdade e virtude. Seu método socrático, baseado em diálogos e perguntas cuidadosamente formuladas, continua a ser uma ferramenta valiosa para a exploração de conceitos e a reflexão crítica. Sócrates nos ensinou a importância de reconhecer nossa própria ignorância como o primeiro passo para adquirir conhecimento genuíno.
+                </p>
+                <p>
+                  Sua ênfase na virtude como a mais alta forma de conhecimento e sua crença de que ninguém age mal deliberadamente nos desafiam a examinar nossas próprias ações e crenças. Sócrates nos lembra que a autorreflexão ética constante é fundamental para uma vida virtuosa.
+                </p>
+                <p>
+                  O julgamento de Sócrates e sua disposição em aceitar a sentença de morte em vez de renunciar aos princípios filosóficos destacam seu compromisso inabalável com a verdade e a integridade intelectual. Seu legado na filosofia, na ética e na reflexão crítica continua a inspirar gerações de pensadores.
+                </p>
+                <p>
+                  Além disso, o julgamento de Sócrates ressalta a tensão entre o pensamento crítico e a autoridade estabelecida, lançando luz sobre questões importantes relacionadas à democracia e à liberdade de expressão.
+                </p>
+                <p>
+                  Em última análise, Sócrates nos lembra da importância de viver uma vida examinada, onde questionamos nossas próprias convicções, valores e ações. Sua influência perdura na filosofia e na cultura ocidental, e sua busca incansável pela verdade continua a nos inspirar a buscar o conhecimento e a virtude em nossas próprias vidas.
+                </p>
+              </div>
+              <div id="platao" class="linha-coluna">
+                <!-- Platão -->
+                <h2 class="segundo-titulo-conteudo">Platão: O Filósofo das Ideias e da República</h2>
+                <hr/>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/platao.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Platão é um dos filósofos mais influentes e importantes da história da filosofia ocidental. Ele nasceu em Atenas, Grécia, por volta de 427 ou 428 a.C. e faleceu cerca de 347 ou 348 a.C. Platão foi discípulo de Sócrates e posteriormente se tornou o mentor de outro grande filósofo, Aristóteles. Sua filosofia abordou uma ampla gama de tópicos, incluindo ética, política, metafísica, epistemologia e educação.
+                </p>
+              </div>
+              <div>
+                <h3>Contexto Histórico: Atenas e o Período Clássico</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/artenas.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Para entender a filosofia de Platão, é fundamental considerar o contexto histórico em que ele viveu. Platão viveu durante o período clássico da Grécia Antiga, uma época de grande efervescência cultural e intelectual. Atenas era o centro desse florescimento cultural e era conhecida por sua democracia, teatro, artes, ciências e filosofia. Foi nesse ambiente que filósofos como Sócrates, Platão e Aristóteles floresceram.
+                </p>
+              </div>
+              <div>
+                <h3>Obras e Diálogos Platônicos</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/obras.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A maior parte do pensamento de Platão é transmitida através de diálogos escritos, onde ele apresenta suas ideias por meio de conversas entre personagens. Os diálogos platônicos exploram uma variedade de temas e conceitos filosóficos. Alguns dos diálogos mais conhecidos de Platão incluem:
+                </p>
+                <ul>
+                  <li class="item-conteudo">
+                    <strong>Apolo:</strong>
+                    Neste diálogo, Sócrates discute o conceito de conhecimento, argumentando que a sabedoria é a chave para uma vida virtuosa.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Fedro:</strong>
+                    Platão explora a natureza do amor e da retórica neste diálogo, onde Sócrates argumenta que o verdadeiro amor é mais do que um simples desejo físico.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>A República:</strong>
+                    Um dos trabalhos mais famosos de Platão, onde ele examina a justiça, a política e a natureza do Estado ideal. Neste diálogo, ele descreve sua visão de uma sociedade justa, governada por filósofos-reis.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Fédon:</strong>
+                    Este diálogo lida com a imortalidade da alma e a natureza da morte, enquanto Sócrates se prepara para beber cicuta após ser condenado à morte.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Timeu e Crítias:</strong>
+                    Aqui, Platão aborda questões cosmológicas e a criação do mundo, introduzindo o conceito das "Ideias" ou "Formas."
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3>A Teoria das Ideias e o Mundo das Formas</h3>
+                <p>
+                  Uma das contribuições mais significativas de Platão para a filosofia é sua teoria das Ideias (ou Formas). Ele acreditava que além do mundo sensível e mutável que percebemos com nossos sentidos, existe um mundo eterno e imutável de Ideias ou Formas perfeitas. Por exemplo, no mundo sensível, vemos objetos físicos que são imperfeitos, mas existe uma Ideia perfeita de "triangularidade" no mundo das Formas.
+                </p>
+              </div>
+              <div>
+                <h3>A Influência de Platão</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/influencia.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  A filosofia de Platão teve um impacto profundo e duradouro na tradição filosófica. Seu diálogo "A República" influenciou o pensamento político e a teoria do Estado por séculos. Além disso, sua ênfase na educação e no desenvolvimento moral moldou a pedagogia ocidental.
+                </p>
+              </div>
+              <div>
+                <h3>Conclusão</h3>
+                <p>
+                  Platão, um dos mais influentes filósofos da história, nasceu em Atenas no século V a.C. e deixou um profundo impacto na filosofia ocidental. Discípulo de Sócrates e mentor de Aristóteles, Platão viveu durante um período de grande efervescência cultural em Atenas.
+                </p>
+                <p>
+                  Sua filosofia é expressa principalmente em forma de diálogos, nos quais abordou diversas áreas, incluindo ética, política, metafísica e epistemologia. Um de seus conceitos mais notáveis é o das Ideias (ou Formas), que postulam a existência de um mundo transcendental de realidades eternas e perfeitas por trás das aparências sensíveis.
+                </p>
+                <p>
+                  Platão também teve uma influência profunda na política, propondo em "A República" sua visão de uma sociedade ideal governada por filósofos-reis. Sua pedagogia enfatizou a importância da educação na formação de cidadãos virtuosos.
+                </p>
+                <p>
+                  Além disso, sua ética defendeu que a busca constante pela verdade e o autoexame são essenciais para a virtude. Seu legado é uma parte essencial do cânone filosófico, e suas ideias sobre conhecimento, moralidade e política continuam a ser discutidas e estudadas em todo o mundo, demonstrando a duradoura relevância de seu pensamento na compreensão da condição humana e do universo.
+                </p>
+              </div>
+              <!-- Aristóteles -->
+              <div id="aristoteles" class="linha-coluna">
+                <h2 class="segundo-titulo-conteudo">Aristóteles: O Filósofo do Pensamento Lógico e da Ética Virtuosa</h2>
+                <hr/>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/aristoteles.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Aristóteles (384-322 a.C.) é um dos filósofos mais renomados e influentes da história. Ele nasceu na cidade de Estagira, na Macedônia, que fazia parte da Grécia Antiga. Aristóteles estudou na Academia de Platão, onde foi aluno de Platão por cerca de vinte anos. Posteriormente, ele estabeleceu sua própria escola, o Liceu, onde desenvolveu seu próprio sistema filosófico.
+                </p>
+              </div>
+              <div>
+                <h3>Contexto Histórico e Vida de Aristóteles</h3>
+                <p>
+                  Aristóteles viveu em um período crucial da história grega, marcado pelo florescimento cultural e filosófico que se seguiu ao período clássico. Seu pensamento abrangeu diversas áreas, incluindo filosofia, biologia, ética, política, lógica, metafísica, poesia e muito mais. Ele foi tutor de Alexandre, o Grande, o que lhe permitiu acumular recursos para suas investigações.
+                </p>
+              </div>
+              <div>
+                <h3>Obras e Contribuições Filosóficas</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/Obras-a.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  As obras de Aristóteles abrangem uma vasta gama de tópicos, muitas das quais são preservadas até hoje. Algumas de suas obras mais notáveis incluem:
+                </p>
+                <ul>
+                  <li class="item-conteudo">
+                    <strong>Ética a Nicômaco:</strong>
+                    Neste trabalho, Aristóteles explora a ética e a moral, propondo sua teoria da ética virtuosa. Ele argumenta que a virtude é o equilíbrio entre extremos e que o objetivo da vida é alcançar a eudaimonia, geralmente traduzida como "felicidade" ou "flourishing."
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Política:</strong>
+                    Aristóteles investiga a natureza do Estado e o governo ideal. Ele distingue diferentes formas de governo e argumenta que a melhor forma é uma mistura de monarquia, aristocracia e democracia.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Metafísica:</strong>
+                    Nesta obra, Aristóteles explora questões de realidade, ser e existência. Ele introduz o conceito de "substância" e discute a relação entre causa e efeito.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Poética:</strong>
+                    Aristóteles analisa a estrutura da tragédia grega e oferece princípios para a criação de uma narrativa dramática eficaz.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Física:</strong>
+                    Esta obra trata da filosofia natural e inclui investigações sobre movimento, espaço e tempo.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3>Teoria das Quatro Causas</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/teoria-a.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  Uma das contribuições mais notáveis de Aristóteles para a filosofia é sua teoria das quatro causas, que busca explicar por que as coisas acontecem ou são como são. As quatro causas são:
+                </p>
+                <ul>
+                  <li class="item-conteudo">
+                    <strong>Causa Material:</strong>
+                    O que uma coisa é feita.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Causa Formal::</strong>
+                    A forma ou essência de algo.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Causa Eficiente:</strong>
+                    O que causa o evento ou mudança.
+                  </li>
+                  <li class="item-conteudo">
+                    <strong>Causa Final:</strong>
+                    O objetivo ou propósito de algo.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3>Lógica Aristotélica</h3>
+                <p>
+                  Aristóteles também é conhecido por suas contribuições à lógica. Ele desenvolveu o sistema conhecido como lógica aristotélica, que incluiu o estudo de silogismos e raciocínio dedutivo. Suas obras "Organon" são centrais para o estudo da lógica clássica.
+                </p>
+              </div>
+              <div>
+                <h3>Legado de Aristóteles</h3>
+                <figure>
+                  <img class="imagem-conteudo" src="../img/conteudo/filosofos/legado-a.png" alt="Imagem demonstrativa" />
+                </figure>
+                <p>
+                  O legado de Aristóteles é vasto e duradouro. Suas obras continuam a ser estudadas e discutidas em filosofia, ética, política, ciência, e muitas outras disciplinas. Seu método de investigação e observação empírica influenciou o desenvolvimento da ciência ocidental.
+                </p>
+                <p>
+                  Além disso, o pensamento ético de Aristóteles, com seu foco na virtude e na busca da eudaimonia, teve um impacto profundo na filosofia moral. Suas reflexões sobre política e governo também desempenharam um papel importante na teoria política subsequente.
+                </p>
+                <p>
+                  Aristóteles é frequentemente considerado um dos três grandes filósofos da Grécia Antiga, ao lado de Sócrates e Platão. Seus escritos e ideias continuam a ser fundamentais para a filosofia ocidental e para a compreensão de questões fundamentais da existência humana.
+                </p>
+              </div>
+              <div>
+                <h3>Conclusão</h3>
+                <p>
+                  Aristóteles, um dos gigantes da filosofia na Grécia Antiga, deixou um legado duradouro que abrange uma ampla gama de disciplinas, da ética à política, da lógica à biologia. Sua abordagem meticulosa e seu método de observação empírica influenciaram o desenvolvimento da filosofia, da ciência e da ética ocidentais.
+                </p>
+                <p>
+                  A contribuição mais notável de Aristóteles foi sua ética virtuosa, que enfatiza o papel da virtude na busca da felicidade e da eudaimonia. Ele também desenvolveu uma teoria única das quatro causas para explicar por que as coisas acontecem, um marco na filosofia natural. Sua lógica aristotélica, centrada em silogismos e raciocínio dedutivo, moldou a lógica clássica e ainda é estudada hoje.
+                </p>
+                <p>
+                  Além disso, Aristóteles teve um impacto profundo na filosofia moral e política, influenciando pensadores ao longo da história. Seu legado continua a ressoar na reflexão sobre questões éticas, políticas e filosóficas. Como um dos três grandes filósofos da Grécia Antiga, ao lado de Sócrates e Platão, Aristóteles desempenhou um papel fundamental na formação do pensamento ocidental.
+                </p>
+                <p>
+                  Seja na ética, na política, na lógica ou na metafísica, Aristóteles deixou uma marca indelével na história da filosofia, e suas ideias e métodos permanecem relevantes e inspiradores para aqueles que buscam compreender o mundo e a natureza da existência humana.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="rodape">
+      <p>© FilosofiaBits - 2023</p>
+      <p>Desenvolvido por Yuri Hostins Raimundo</p>
+    </footer>
+  </body>
+</html>

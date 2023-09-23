@@ -1,0 +1,185 @@
+.banner-descricao {
+  text-align: center;
+  display: block;
+  font-size: 25px;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.banner-imagem {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.295)), url("../../img/background/images.jpeg");
+  background-size: cover;
+}
+
+.banner-imagem--mitos  {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.295)), url("../../img/background/background-mitos.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-imagem--felicidade  {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.295)), url("../../img/background/background-felicidade.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-imagem--Contato  {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.295)), url("../../img/background/background-.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.container-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.titulo-borda {
+  border: 10px solid var(--black);
+  padding: 16px 16px;
+  display: inline-block;
+}
+
+
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.banner h1 {
+  font-size: 8rem;
+  font-weight: 600;
+  -webkit-text-stroke: 2px var(--color-link--segundo);
+  color: transparent;
+  transition: all 0.5s ease;
+}
+
+.botao {
+  width: 180px;
+  height: 50px;
+  border-radius: 5px;
+  background: transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  margin-left: 1rem;
+}
+
+.botao:hover {
+  transform: translateY(-5px);
+}
+
+.luminoso::before {
+  content: "";
+  position: absolute;
+  background-image: conic-gradient(var(--color-link--segundo) 20deg, transparent 150deg);
+  width: 400%;
+  height: 400%;
+  border-radius: 5px;
+  animation: rotate 3s linear infinite;
+}
+
+.luminoso::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+
+#botao-socraticos::after {
+  content: "Pré-socráticos";
+}
+
+#botao-socrates::after {
+  content: "Sócrates";
+}
+
+#botao-platao::after {
+  content: "Platão";
+}
+
+#botao-aristoteles::after {
+  content: "Aristóteles";
+}
+
+#botao-licaao::after {
+  content: "Licaão";
+}
+#botao-cerberus::after {
+  content: "Cérberus";
+}
+#botao-medusa::after {
+  content: "Medusa";
+}
+#botao-hidra::after {
+  content: "Hidra";
+}
+
+#botao-felicidade-1::after {
+  content: "A Felicidade";
+}
+
+#botao-felicidade-2::after {
+  content: "O que é felecidade...";
+}
+
+#botao-Contato-1::after {
+  content: "Contato";
+}
+
+#botao-Contato-2::after {
+  content: "Alguns Projetos";
+}
+
+@media screen and (max-width: 740px){
+  .titulo-borda {
+    border: none
+  }
+}
+
+@media (max-width: 620px) {
+  .banner h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .banner h1 {
+    font-size: 3rem;
+  }
+
+  .botao {
+    width: 130px;
+  }
+
+  .luminoso::after {
+    width: 120px;
+    font-size: 0.9rem;
+  }
+}

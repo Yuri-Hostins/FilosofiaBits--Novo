@@ -1,0 +1,377 @@
+@import url('alternar/alternar-tema.css');
+
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 5;
+  transition: .5s;
+}
+
+#ativo-item{
+  color: var(--color-link);
+}
+
+.logo {
+  width: 40px;
+  
+}
+
+.navegacao-item {
+  position: relative;
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: -0.13px;
+  text-decoration: none;
+  margin-left: 2.5rem;
+  transition: all 0.5s ease;
+}
+
+.navegacao-item:hover {
+  color: var(--color-link);
+}
+
+.navegacao-item::after {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  left: 50%;
+  width: 0;
+  height: 0.15rem;
+  transform: translateX(-50%);
+  background-color: var(--color-link);
+  transition: all 0.5s ease;
+}
+
+.navegacao-item:hover::after {
+  width: 100%;
+}
+
+.icons {
+  position: absolute;
+  right: 5%;
+  font-size: 2.3rem;
+  color: var(--black);
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+@media (max-width: 900px) {
+  .cabecalho {
+    padding: 1.3rem 5%;
+  }
+
+  .content h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 701px) {
+  .cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 5;
+  }
+  
+  .logo {
+    margin-left: 3.25rem;
+    width: 40px;
+  }
+}
+
+@media (max-width: 699px) {
+
+  .svg-cabecalho {
+    height: 80px;
+    position: absolute;
+    width: 80px;
+    right: 1.25rem;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .cabecalho::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+  }
+
+  .cabecalho::after {
+    content: "";
+    top: 0;
+    left: -100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.8s;
+  }
+
+  .cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+  }
+  
+  .logo {
+    width: 40px;
+  }
+
+  .svg-cabecalho {
+    height: 80px;
+    position: absolute;
+    width: 80px;
+    
+    display: flex;
+  }
+
+  .icons {
+    display: inline-flex;
+  }
+
+  #check:checked~.icons #menu-icon {
+    display: none;
+  }
+
+  .icons #close-icon {
+    display: none;
+  }
+
+  #check:checked~.icons #close-icon {
+    display: block;
+  }
+
+  .navegacao {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  #check:checked~.navegacao {
+    height: 17.7rem;
+  }
+
+  .navegacao-item {
+    display: block;
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .navegacao-item:hover::after {
+    width: auto;
+  }
+
+  #check:checked~.navegacao a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(0.15s * var(--i));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.placas {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 160px;
+  width: 640px;
+}
+
+@media (max-width: 640px) {
+  .placas {
+    width: 320px;
+  }
+}
+
+.placa {
+  height: 80px;
+  width: 80px;
+}
+
+.burger {
+  filter: url(#gooeyness);
+}
+
+.x {
+  transform: scale(0);
+  transition: transform 400ms;
+}
+
+.linha {
+  fill: none;
+  stroke: var(--black);
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50%;
+  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+
+.x .linha {
+  stroke-width: 5.5px;
+}
+
+.ativo-menu .linha {
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+}
+
+.ativo-menu .x {
+  transform: scale(1);
+  transition: transform 400ms 350ms;
+}
+
+/* Die vierte teller */
+.placa .x {
+  transition: transform 400ms;
+}
+
+.placa .linha {
+  transform-origin: 50%;
+  transition: transform 400ms 100ms;
+}
+
+.ativo-menu.placa .linha {
+  transition: transform 400ms;
+}
+
+.ativo-menu.placa .linha1 {
+  transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(.7);
+}
+
+.ativo-menu.placa .linha2 {
+  transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(.7);
+}
+
+.ativo-menu.placa .linha3 {
+  transform: translateY(0px) rotate(45deg) scale(.7);
+}
+
+.ativo-menu.placa .linha4 {
+  transform: translateY(0px) rotate(-45deg) scale(.7);
+}
+
+.ativo-menu.placa .linha5 {
+  transform: translateX(18px) translateY(3px) rotate(45deg) scale(.7);
+}
+
+.ativo-menu.placa .linha6 {
+  transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(.7);
+}
+
+.ativo-menu.placa .x {
+  transition: transform 400ms 100ms;
+  transform: scale(1);
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 901px){
+
+  .cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 5;
+    transition: .5s;
+  }
+
+  .navegacao-fixa {
+    background: var(--black);
+    padding: 10px 0px;
+    box-shadow: 0 5px 20px var(--box-shadow-navbar);
+  }
+
+  header .navegacao {
+    position: relative;
+    display: flex;
+  }
+
+  header .navegacao li {
+    list-style: none;
+    margin-left: 30px;
+  }
+
+  header .navegacao  a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 300;
+    font-size: 1.5em;
+    transition: .5s;
+  }
+
+  .sem-margens {
+    margin: 0;
+  }
+}
+
+

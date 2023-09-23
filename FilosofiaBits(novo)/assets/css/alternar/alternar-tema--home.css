@@ -1,0 +1,16 @@
+.alternar-tema-escuro {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.alternar-tema-escuro button {
+  width: 70px;
+  background-color: #808080;
+  border-radius: 20px;
+  border: none;
+  position: relative;
+  padding: 4px;
+  cursor: pointer;
+}

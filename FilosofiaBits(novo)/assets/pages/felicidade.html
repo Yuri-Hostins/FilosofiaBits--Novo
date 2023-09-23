@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Tags Metas -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Links -->
+
+    <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.png">
+    <link rel="stylesheet" href="../css/base.css">
+
+    <!-- Script -->
+
+    <script src="../js/loader.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/alternar.js" defer></script>
+    <script src="../js/voltaTop.js" defer></script>
+
+    <!-- Título -->
+    <title>Felicidade | FilosofiaBits</title>
+  </head>
+
+  <body>
+
+    <!-- início do preloader -->
+		<section id="preloader">
+      <div class="inner">
+        <div class="loader"></div>
+        <div class="container--loader">
+          <div class="container--animacao">
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+					</div>
+					<svg>
+						<filter id="gooey">
+							<feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+							<feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -10 " />
+						</filter>
+					</svg>
+          <div>
+            <h4 class="texto-loader">O site está carregando. Por favor, aguarde um momento.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+		<!-- fim do preloader	 -->
+
+    <!-- início do "back-to-top" -->
+    <div class="box-botao" id="btn-top">
+      <span class="text-botao">Voltar ao topo</span>
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/>
+      </svg>
+    </div>
+    <!-- fim do "back-to-top" -->
+    
+    <header class="cabecalho sem-margens" >
+      <a href="#"><img src="../img/favicon/favicon.png" alt="logo" class="logo" /></a>
+
+      <div onclick="alternarEscuro()" class="alternar-tema-escuro">
+        <button>
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path 
+             d="M22.088 13.126l1.912-1.126-1.912-1.126c-1.021-.602-1.372-1.91-.788-2.942l1.093-1.932-2.22-.02c-1.185-.01-2.143-.968-2.153-2.153l-.02-2.219-1.932 1.093c-1.031.583-2.34.233-2.941-.788l-1.127-1.913-1.127 1.913c-.602 1.021-1.91 1.372-2.941.788l-1.932-1.093-.02 2.219c-.01 1.185-.968 2.143-2.153 2.153l-2.22.02 1.093 1.932c.584 1.032.233 2.34-.788 2.942l-1.912 1.126 1.912 1.126c1.021.602 1.372 1.91.788 2.942l-1.093 1.932 2.22.02c1.185.01 2.143.968 2.153 2.153l.02 2.219 1.932-1.093c1.031-.583 2.34-.233 2.941.788l1.127 1.913 1.127-1.913c.602-1.021 1.91-1.372 2.941-.788l1.932 1.093.02-2.219c.011-1.185.969-2.143 2.153-2.153l2.22-.02-1.093-1.932c-.584-1.031-.234-2.34.788-2.942zm-10.117 6.874c-4.411 0-8-3.589-8-8s3.588-8 8-8 8 3.589 8 8-3.589 8-8 8zm.029-2c-3.313 0-6-2.687-6-6s2.687-6 6-6v12z">
+            </path>
+          </svg>
+        </button>
+      </div>
+
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <div class="placa placas " onclick="this.classList.toggle('ativo-menu')">
+          <svg class="burger svg-cabecalho" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+            <path class="linha linha1" d="M 50,35 H 30" />
+            <path class="linha linha2" d="M 50,35 H 70" />
+            <path class="linha linha3" d="M 50,50 H 30" />
+            <path class="linha linha4" d="M 50,50 H 70" />
+            <path class="linha linha5" d="M 50,65 H 30" />
+            <path class="linha linha6" d="M 50,65 H 70" />
+          </svg>
+          <svg class="x svg-cabecalho" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+            <path class="linha" d="M 34,32 L 66,68" />
+            <path class="linha" d="M 66,32 L 34,68" />
+          </svg>
+        </div>
+      </label>
+
+      <nav class="navegacao">
+        <a href="../../index.html" class="navegacao-item" style="--i: 0">Home</a>
+        <a href="Filosofos.html" class="navegacao-item" style="--i: 1">Filósofos</a>
+        <a href="#" class="navegacao-item" id="ativo-item" style="--i: 2">Felicidade</a>
+        <a href="mitos.html" class="navegacao-item" style="--i: 2">Mitos Gregos</a>
+        <a href="contato.html" class="navegacao-item" style="--i: 3">Contato</a>
+      </nav>
+    </header> 
+    <section class="banner banner-imagem--felicidade">
+      <h1 class="titulo-borda">Felicidade</h1>
+      <span class="banner-descricao">Clique no botão abaixo para ver o conteúdo:</span>
+      <div class="container-botoes">
+        <a class="botao luminoso" id="botao-felicidade-1" href="#felicidade-1"></a>
+        <a class="botao luminoso" id="botao-felicidade-2" href="#felicidade-2"></a>
+      </div>
+    </section>
+
+
+    <main>
+      <section >
+        <div class="container-conteudo">
+          <div class="background-conteudo">
+            <div class="conteudo">
+              <div id="felicidade-1" class="linha-coluna">
+                <!-- O que é felicidade? -->
+                <h3 class="segundo-titulo-conteudo">A Felicidade na Filosofia: Uma Busca Duradoura pela Vida Boa</h3>
+                <hr/>
+                <p>
+                  A busca pela felicidade é uma das questões mais antigas e profundas da filosofia, e filósofos de diferentes épocas e tradições ofereceram diversas perspectivas sobre o que é a felicidade e como alcançá-la. Aqui estão algumas das principais abordagens filosóficas à felicidade:
+                </p>
+              </div>
+              <div class="linha-coluna">
+                <h3>Hedonismo</h3>
+                <hr class="barra-felicidade"/>
+                <p>
+                  Os filósofos hedonistas, como Epicuro e os cirenaicos, acreditavam que a felicidade era alcançada pela busca do prazer e pela minimização da dor.
+                </p>
+                <p>
+                  No entanto, o hedonismo varia em sua compreensão do prazer; Epicuro, por exemplo, enfatizava o "prazer tranquilo" da ausência de dor física e mental e a busca da amizade e da sabedoria como fontes de felicidade duradoura.
+                </p>
+              </div>
+              <div class="linha-coluna">
+                <h3>Eudaimonia</h3>
+                <hr class="barra-felicidade"/>
+                <p>
+                  A filosofia aristotélica se concentra na ideia de eudaimonia, que é frequentemente traduzida como "felicidade" ou "flourishing" (florescimento).
+                </p>
+                <p>
+                  Para Aristóteles, a eudaimonia não é simplesmente a busca do prazer, mas a busca de uma vida virtuosa e significativa, alcançada através da prática de virtudes morais, como a coragem, a justiça e a sabedoria.
+                </p>
+              </div>  
+              <div class="linha-coluna">
+                <h3>Utilitarismo</h3>
+                <hr class="barra-felicidade"/>
+                <p>
+                  Os utilitaristas, como Jeremy Bentham e John Stuart Mill, argumentam que a felicidade é a maximização do bem-estar geral.
+                </p>
+                <p>
+                  Eles veem a felicidade como a soma total de prazer e a ausência de dor em uma sociedade, e promovem ações que maximizam a felicidade para o maior número possível de pessoas.
+                </p>
+              </div>
+              <div class="linha-coluna">
+                <h3>Deontologia e Virtude</h3>
+                <hr class="barra-felicidade"/>
+                <p>
+                  Filósofos como Immanuel Kant defendem uma abordagem deontológica, que se concentra em agir de acordo com o dever moral, independentemente das consequências.
+                </p>
+                <p>
+                  Outros, como os estoicos, promovem a virtude e a autossuficiência como fontes de felicidade, acreditando que se pode ser feliz através do controle das próprias paixões e desejos.
+                </p>
+              </div>
+              <div class="linha-coluna">
+                <h3>Religião e Espiritualidade</h3>
+                <hr class="barra-felicidade"/>
+                <p>
+                  Muitas tradições religiosas e espirituais abordam a felicidade como uma busca pelo significado, propósito e conexão com o divino.
+                </p>
+                <p>
+                  A ideia de alcançar a felicidade através da devoção, da meditação, da caridade e da busca espiritual é central em várias religiões.
+                </p>
+              </div>
+              <div class="linha-coluna">
+                <h3>Perspectivas Contemporâneas</h3>
+                <hr class="barra-felicidade"/>
+                <p>
+                  A filosofia contemporânea continua a explorar a natureza da felicidade e suas complexidades.
+                </p>
+                <p>
+                  Alguns filósofos modernos argumentam que a felicidade está relacionada à realização pessoal e à autenticidade, enquanto outros se concentram na importância das relações interpessoais e do bem-estar social.
+                </p>
+              </div>
+              <div class="linha-coluna">
+                <h3>Conclusão</h3>
+                <hr class="barra-felicidade"/>
+                <p>
+                  A filosofia da felicidade é um campo diversificado que oferece várias perspectivas sobre o que é a felicidade e como alcançá-la. Desde a busca pelo prazer hedonista até a realização virtuosa aristotélica, a filosofia aborda a felicidade de várias maneiras. Também incorpora elementos da psicologia, neurociência e bem-estar social na compreensão moderna da felicidade. No entanto, a busca pela felicidade continua sendo uma jornada pessoal e única, moldada por experiências, valores e circunstâncias individuais. A filosofia fornece um mapa de possibilidades, mas a verdadeira busca é uma jornada de autoconhecimento e busca daquilo que é significativo e gratificante em nossas próprias vidas.
+                </p>
+              </div>
+              <div id="felicidade-2" class="linha-coluna">
+                <!-- O que é felicidade para mim -->
+                <h2 class="segundo-titulo-conteudo"> O que é felicidade para mim</h2>
+                <hr/>
+              <div>
+                <p>
+                  "Na minha visão, a felicidade é uma experiência composta por preciosos momentos que pontuam nossa jornada pela vida. São como raios de sol que perfuram as nuvens da rotina, trazendo calor e alegria ao nosso coração. No entanto, esses momentos de felicidade são efêmeros, transitórios, e após sua passagem, a tristeza, a melancolia ou os desafios inevitavelmente retornam para nos lembrar da complexidade da existência humana."
+                </p>
+                
+                <p>
+                  "Essa intercalação entre momentos de felicidade e adversidades é o que torna nossa jornada tão rica e significativa. São os altos e baixos que nos permitem apreciar verdadeiramente a beleza dos momentos felizes e nos desafiam a crescer e aprender com as dificuldades. A felicidade, para mim, é como uma melodia composta por notas alegres e tristes, criando uma sinfonia única e inimitável que é a minha vida."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="rodape">
+      <p>© FilosofiaBits - 2023</p>
+      <p>Desenvolvido por Yuri Hostins Raimundo</p>
+    </footer>
+  </body>
+</html>

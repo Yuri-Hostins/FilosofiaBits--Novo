@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Tags Metas -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Links -->
+
+    <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.png">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/conteudo/contato.css">
+
+    <!-- Script -->
+
+    <script src="../js/loader.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/alternar.js" defer></script>
+    <script src="../js/voltaTop.js" defer></script>
+
+    <!-- Título -->
+    <title>Felicidade | FilosofiaBits</title>
+  </head>
+
+  <body>
+
+    <!-- início do preloader -->
+		<section id="preloader">
+      <div class="inner">
+        <div class="loader"></div>
+        <div class="container--loader">
+          <div class="container--animacao">
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+						<div class="liquido"></div>
+					</div>
+					<svg>
+						<filter id="gooey">
+							<feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+							<feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -10 " />
+						</filter>
+					</svg>
+          <div>
+            <h4 class="texto-loader">O site está carregando. Por favor, aguarde um momento.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+		<!-- fim do preloader	 -->
+
+    <!-- início do "back-to-top" -->
+    <div class="box-botao" id="btn-top">
+      <span class="text-botao">Voltar ao topo</span>
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/>
+      </svg>
+    </div>
+    <!-- fim do "back-to-top" -->
+    
+    <header class="cabecalho sem-margens" >
+      <a href="#"><img src="../img/favicon/favicon.png" alt="logo" class="logo" /></a>
+
+      <div onclick="alternarEscuro()" class="alternar-tema-escuro">
+        <button>
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path 
+             d="M22.088 13.126l1.912-1.126-1.912-1.126c-1.021-.602-1.372-1.91-.788-2.942l1.093-1.932-2.22-.02c-1.185-.01-2.143-.968-2.153-2.153l-.02-2.219-1.932 1.093c-1.031.583-2.34.233-2.941-.788l-1.127-1.913-1.127 1.913c-.602 1.021-1.91 1.372-2.941.788l-1.932-1.093-.02 2.219c-.01 1.185-.968 2.143-2.153 2.153l-2.22.02 1.093 1.932c.584 1.032.233 2.34-.788 2.942l-1.912 1.126 1.912 1.126c1.021.602 1.372 1.91.788 2.942l-1.093 1.932 2.22.02c1.185.01 2.143.968 2.153 2.153l.02 2.219 1.932-1.093c1.031-.583 2.34-.233 2.941.788l1.127 1.913 1.127-1.913c.602-1.021 1.91-1.372 2.941-.788l1.932 1.093.02-2.219c.011-1.185.969-2.143 2.153-2.153l2.22-.02-1.093-1.932c-.584-1.031-.234-2.34.788-2.942zm-10.117 6.874c-4.411 0-8-3.589-8-8s3.588-8 8-8 8 3.589 8 8-3.589 8-8 8zm.029-2c-3.313 0-6-2.687-6-6s2.687-6 6-6v12z">
+            </path>
+          </svg>
+        </button>
+      </div>
+
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <div class="placa placas " onclick="this.classList.toggle('ativo-menu')">
+          <svg class="burger svg-cabecalho" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+            <path class="linha linha1" d="M 50,35 H 30" />
+            <path class="linha linha2" d="M 50,35 H 70" />
+            <path class="linha linha3" d="M 50,50 H 30" />
+            <path class="linha linha4" d="M 50,50 H 70" />
+            <path class="linha linha5" d="M 50,65 H 30" />
+            <path class="linha linha6" d="M 50,65 H 70" />
+          </svg>
+          <svg class="x svg-cabecalho" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+            <path class="linha" d="M 34,32 L 66,68" />
+            <path class="linha" d="M 66,32 L 34,68" />
+          </svg>
+        </div>
+      </label>
+
+      <nav class="navegacao">
+        <a href="../../index.html" class="navegacao-item" style="--i: 0">Home</a>
+        <a href="Filosofos.html" class="navegacao-item" style="--i: 1">Filósofos</a>
+        <a href="felicidade.html" class="navegacao-item" style="--i: 2">Felicidade</a>
+        <a href="mitos.html" class="navegacao-item" style="--i: 2">Mitos Gregos</a>
+        <a href="#" class="navegacao-item" id="ativo-item" style="--i: 3">Contato</a>
+      </nav>
+    </header> 
+    <section class="banner banner-imagem--Contato">
+      <h1 class="titulo-borda">Contato</h1>
+      <span class="banner-descricao">Clique no botão abaixo para ver o conteúdo:</span>
+      <div class="container-botoes">
+        <a class="botao luminoso" id="botao-Contato-1" href="#Contato-1"></a>
+        <a class="botao luminoso" id="botao-Contato-2" href="#Contato-2"></a>
+      </div>
+    </section>
+
+
+    <main>
+      <section >
+        <div class="container-conteudo">
+          <div class="background-conteudo">
+            <div class="conteudo">
+              <div id="felicidade-1" class="linha-coluna">
+                <section class="contato" id="contato">
+                  <div class="titulo">
+                    <div id="felicidade-2" class="linha-coluna">
+                      <!-- Projetos -->
+                      <h2 class="segundo-titulo-conteudo">Contato</h2>
+                    <hr/>
+                    <p>
+                      Por favor, caso encontre algum bug ou informação incorreta/desatualizada, entre em contato. Agradeço sua colaboração!
+                    </p>
+                  </div>
+                    <div class="container-contato">
+                      <div>
+                        <a class="botao-contato in-botao box-botao" href="https://www.instagram.com/dev._.yuri" target="_blank">
+                          <span class="text-botao">Instagram</span>
+                          <svg width="40" height="40" viewbox="0 0 24 24">
+                            <path
+                              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            <!-- Ícone do Instagram -->
+                          </svg>
+                        </a>
+                      </div>
+            
+                      <div>
+                        <a href="mailto:YuriVn21@outlook.com" class="botao-contato gm-botao box-botao" target="_blank">
+                          <span class="text-botao">Email</span>
+                          <svg width="40" height="40" viewbox="0 0 24 24">
+                            <path
+                              d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
+                          </svg>
+                        </a>
+                      </div>
+            
+                      <div>
+                        <a href="https://wa.me/554797155070?text=Quero%20Reportar%20Um%20Bug%20Ou%20Entrar%20Em%20Contato" class="botao-contato wh-botao box-botao" target="_blank">
+                          <span class="text-botao">Whatsapp</span>
+                          <svg width="40" height="40" viewbox="0 0 24 24">
+                            <path
+                              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                            <!-- Ícone do Whatsapp -->
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    
+              </div>
+              
+              <div id="Contato-2" class="linha-coluna">
+                <!-- Projetos -->
+                <h2 class="segundo-titulo-conteudo">Explore alguns dos meus projetos</h2>
+                <hr/>
+                <div class="container-contato">
+                  <div>
+                    <a class="botao-contato fi-botao box-botao" href="https://citologiabits.netlify.app" target="_blank">
+                      <span class="text-botao">CitologiaBits</span>
+                      <svg width="70" height="90" viewBox="0 0 512.000000 512.000000">
+                        <g transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)" stroke="none">
+                          <path d="M1424 5101 c-25 -12 -50 -33 -65 -57 -21 -33 -24 -50 -22 -115 5
+                          -168 99 -366 273 -575 137 -164 370 -377 577 -529 46 -33 82 -62 82 -65 0 -3
+                          -28 -25 -62 -50 -237 -171 -555 -476 -677 -648 -305 -431 -252 -767 195 -1231
+                          124 -128 348 -324 482 -421 34 -25 62 -47 62 -50 0 -3 -36 -32 -82 -65 -207
+                          -152 -440 -365 -577 -529 -174 -209 -268 -407 -273 -575 -2 -65 1 -82 22 -115
+                          26 -42 86 -75 135 -76 39 0 106 34 129 66 11 14 25 60 32 102 22 125 53 194
+                          137 310 l39 52 729 0 729 0 39 -52 c84 -116 115 -185 137 -310 7 -42 21 -88
+                          32 -102 23 -32 90 -66 129 -66 49 1 109 34 135 76 21 33 24 50 22 115 -5 168
+                          -99 366 -273 575 -137 164 -370 377 -577 529 -46 33 -82 62 -82 65 0 3 28 25
+                          62 50 237 171 555 476 677 648 305 431 252 767 -195 1231 -124 128 -348 324
+                          -482 421 -34 25 -62 47 -62 50 0 3 36 32 82 65 207 152 440 365 577 529 174
+                          209 268 407 273 575 2 65 -1 82 -22 115 -26 42 -86 75 -135 76 -39 0 -106 -34
+                          -129 -66 -11 -14 -25 -60 -32 -102 -22 -125 -53 -194 -137 -309 l-39 -53 -729
+                          0 -729 0 -39 53 c-84 115 -115 184 -137 309 -15 89 -34 120 -91 148 -50 25
+                          -87 25 -140 1z m1429 -929 c-131 -107 -277 -212 -293 -212 -16 0 -162 105
+                          -293 212 l-109 88 402 0 402 0 -109 -88z m-190 -679 c102 -74 282 -218 292
+                          -233 4 -7 -131 -10 -396 -10 -359 0 -400 2 -389 15 34 41 366 293 388 294 7 1
+                          54 -29 105 -66z m660 -610 c34 -47 97 -149 97 -158 0 -3 -387 -5 -860 -5 -473
+                          0 -860 2 -860 5 0 9 63 111 97 158 l35 47 728 0 728 0 35 -47z m97 -488 c0 -9
+                          -63 -111 -97 -157 l-35 -48 -728 0 -728 0 -35 48 c-34 46 -97 148 -97 157 0 3
+                          387 5 860 5 473 0 860 -2 860 -5z m-465 -535 c-18 -30 -374 -300 -395 -300
+                          -21 0 -377 270 -395 300 -4 7 131 10 395 10 264 0 399 -3 395 -10z m-297 -762
+                          c83 -59 200 -150 270 -210 l33 -28 -402 0 -401 0 109 88 c138 112 274 211 291
+                          212 8 0 53 -28 100 -62z"></path>
+                        </g><!-- Ícone do CitologiaBits -->
+                      </svg>
+                    </a>
+                  </div>
+        
+                  <div>
+                    <a href="https://genioquiz-africa.netlify.app" class="botao-contato gq-botao box-botao" target="_blank">
+                      <span class="text-botao">GênioQuiz</span>
+                      <svg class="svg-contato" width="70" height="90" viewBox="0 0 2500.000000 2500.000000">
+                        <g transform="translate(0.000000,2500.000000) scale(0.100000,-0.100000)" stroke="none">
+                          <path d="M12885 20450 c-1297 -90 -2480 -566 -3490 -1406 -166 -138 -579 -551
+                          -719 -719 -723 -870 -1176 -1861 -1351 -2957 -48 -301 -66 -558 -74 -1033 l-6
+                          -411 -33 -67 c-76 -154 -173 -258 -903 -972 -315 -309 -380 -390 -480 -599
+                          -82 -171 -95 -247 -90 -526 2 -150 21 -236 73 -339 102 -204 317 -355 825
+                          -582 97 -43 186 -88 198 -99 32 -30 38 -57 105 -510 34 -223 99 -659 146 -970
+                          88 -589 107 -715 174 -1170 48 -332 70 -440 116 -573 68 -193 152 -333 282
+                          -469 219 -227 506 -347 913 -379 146 -12 759 -4 759 10 0 12 394 6 416 -6 36
+                          -20 52 -103 64 -313 6 -107 17 -287 25 -400 7 -113 21 -311 29 -440 9 -129 18
+                          -253 21 -275 3 -22 7 -109 10 -194 7 -214 41 -358 96 -415 11 -12 42 -49 69
+                          -82 58 -73 170 -152 261 -184 106 -37 235 -38 399 -4 74 15 148 27 163 26 15
+                          -1 1456 284 3202 633 2530 505 3189 640 3250 664 254 102 446 320 516 586 26
+                          99 27 158 33 1180 3 424 10 856 15 960 18 319 61 734 83 787 5 15 7 35 4 44
+                          -4 9 -2 22 3 28 5 6 16 58 26 116 40 244 150 750 165 760 4 3 24 68 45 145
+                          128 485 293 962 521 1512 205 493 311 827 393 1228 51 254 100 612 105 770 2
+                          50 9 216 16 371 61 1283 -284 2543 -986 3604 -1002 1515 -2604 2473 -4444
+                          2656 -185 18 -759 26 -945 14z m970 -214 c1196 -129 2244 -571 3160 -1332 157
+                          -131 523 -494 665 -659 1162 -1360 1628 -3179 1269 -4955 -80 -397 -178 -701
+                          -383 -1198 -413 -999 -662 -1895 -790 -2852 -74 -551 -87 -790 -95 -1810 l-6
+                          -865 -27 -73 c-62 -171 -175 -300 -330 -377 l-93 -46 -3330 -664 c-2207 -441
+                          -3351 -665 -3391 -665 -128 0 -267 78 -340 192 -57 89 -61 121 -103 720 -22
+                          310 -52 745 -66 968 -14 223 -28 419 -30 435 l-5 30 -602 -6 c-631 -7 -828 -1
+                          -988 31 -435 84 -711 336 -834 761 -31 107 -31 113 -221 1374 -86 567 -183
+                          1215 -217 1441 l-62 410 -221 94 c-518 222 -750 371 -832 535 -79 156 -69 289
+                          37 500 98 195 147 252 638 730 246 239 473 464 505 499 145 164 251 335 276
+                          446 5 25 12 236 15 470 6 537 31 811 107 1193 412 2080 1916 3773 3926 4420
+                          407 131 859 223 1258 256 72 6 146 13 165 15 95 11 804 -3 945 -18z"></path>
+                        </g> <!-- Ícone do GênioQuiz -->
+                      </svg>
+                    </a>
+                  </div>
+        
+                  <div>
+                    <a href="https://wa.me/554797155070?text=Quero%20Reportar%20Um%20Bug%20Ou%20Entrar%20Em%20Contato" class="botao-contato wh-botao box-botao" target="_blank">
+                      <span class="text-botao">BooksBits(Em Desenvolvimento)</span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="rodape">
+      <p>© FilosofiaBits - 2023</p>
+      <p>Desenvolvido por Yuri Hostins Raimundo</p>
+    </footer>
+  </body>
+</html>
